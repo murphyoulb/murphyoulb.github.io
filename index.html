@@ -1,0 +1,1872 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>海角专区_海角专区原创视频社区_海角专区官方内容平台</title>
+<meta name="description" content="海角专区官方网站，专注原创高清影像与企业级内容生态，汇聚创作者、精品视频与真实社区互动，持续运营的品质视频品牌平台。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d2b3e'/%3E%3Cpath d='M12 44 Q32 18 52 44 Z' fill='%23ffc861'/%3E%3Ccircle cx='32' cy='26' r='5' fill='%23ff7a4d'/%3E%3C/svg%3E">
+<style>
+:root{
+  --hj-deep:#0b2436;
+  --hj-deep-2:#123c55;
+  --hj-blue:#1f6f8b;
+  --hj-mist:#e9f1f5;
+  --hj-paper:#f7fafc;
+  --hj-white:#ffffff;
+  --hj-amber:#ffc861;
+  --hj-coral:#ff7a4d;
+  --hj-ink:#10222e;
+  --hj-muted:#5b7285;
+  --hj-line:#d5e2ea;
+  --hj-shadow:0 18px 40px -22px rgba(11,36,54,.45);
+  --hj-radius:18px;
+  --hj-sticky:118px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hj-sticky);}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  color:var(--hj-ink);
+  background:var(--hj-paper);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+ul,ol{list-style:none;}
+.hj-wrap{width:min(1180px,92vw);margin:0 auto;}
+.hj-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--hj-blue);font-weight:700;
+}
+.hj-eyebrow::before{content:"";width:22px;height:2px;background:var(--hj-coral);}
+.hj-h2{
+  font-size:clamp(23px,3vw,32px);line-height:1.3;letter-spacing:.01em;
+  color:var(--hj-deep);font-weight:800;margin-top:8px;
+}
+.hj-h2 .hj-accent{color:var(--hj-coral);}
+.hj-h3{font-size:18px;font-weight:700;color:var(--hj-deep);line-height:1.45;}
+.hj-lead{color:var(--hj-muted);font-size:15px;max-width:64ch;}
+.hj-section{padding:64px 0;}
+.hj-section + .hj-section{border-top:1px solid var(--hj-line);}
+.hj-sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:30px;}
+.hj-pill{
+  display:inline-block;padding:3px 11px;border-radius:999px;font-size:12px;font-weight:600;
+  background:var(--hj-mist);color:var(--hj-blue);white-space:nowrap;
+}
+.hj-pill.is-coral{background:#ffe7de;color:#c4471f;}
+.hj-pill.is-amber{background:#fff2d4;color:#8a5b00;}
+.hj-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:11px 22px;border-radius:999px;font-size:14px;font-weight:700;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+  border:1px solid transparent;
+}
+.hj-btn:hover{transform:translateY(-2px);}
+.hj-btn-primary{background:var(--hj-coral);color:#fff;box-shadow:0 12px 24px -14px rgba(255,122,77,.9);}
+.hj-btn-primary:hover{background:#f26a3c;}
+.hj-btn-ghost{border-color:rgba(255,255,255,.5);color:#fff;}
+.hj-btn-ghost:hover{background:rgba(255,255,255,.14);}
+.hj-btn-outline{border-color:var(--hj-blue);color:var(--hj-blue);background:#fff;}
+.hj-btn-outline:hover{background:var(--hj-mist);}
+.hj-btn-sm{padding:6px 14px;font-size:12.5px;}
+
+/* ============ 公告条 + 页头（吸顶） ============ */
+.hj-top{
+  position:sticky;top:0;z-index:120;
+  background:var(--hj-white);
+  box-shadow:0 10px 30px -22px rgba(11,36,54,.55);
+}
+.hj-notice{
+  background:linear-gradient(90deg,var(--hj-deep),var(--hj-deep-2) 55%,#1c5a72);
+  color:#e8f2f8;font-size:13px;
+  padding:9px 0;
+}
+.hj-notice-inner{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.hj-notice-tag{
+  flex:0 0 auto;background:var(--hj-amber);color:#3b2a00;
+  font-size:11.5px;font-weight:800;letter-spacing:.08em;
+  padding:2px 10px;border-radius:999px;
+}
+.hj-notice-text{flex:1 1 320px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#d7e7f0;}
+.hj-notice-text strong{color:#fff;font-weight:700;}
+.hj-notice-link{color:var(--hj-amber);font-weight:700;font-size:12.5px;white-space:nowrap;}
+.hj-notice-link:hover{text-decoration:underline;}
+
+.hj-header{padding:14px 0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);}
+.hj-header-inner{display:flex;align-items:center;gap:22px;}
+.hj-brand{display:flex;align-items:center;gap:11px;flex:0 0 auto;}
+.hj-brand-mark{
+  width:40px;height:40px;border-radius:12px;flex:0 0 auto;
+  background:linear-gradient(145deg,var(--hj-deep),var(--hj-blue));
+  display:grid;place-items:center;color:var(--hj-amber);font-weight:800;font-size:16px;
+  box-shadow:inset 0 -6px 14px rgba(0,0,0,.25);
+}
+.hj-brand-name{font-size:17px;font-weight:800;color:var(--hj-deep);letter-spacing:.02em;line-height:1.2;}
+.hj-brand-sub{font-size:10.5px;letter-spacing:.22em;color:var(--hj-muted);text-transform:uppercase;}
+.hj-nav{display:flex;align-items:center;gap:4px;margin-left:8px;flex:1 1 auto;}
+.hj-nav a{
+  padding:8px 12px;border-radius:9px;font-size:14.5px;font-weight:600;color:#26455a;
+  transition:background .18s ease,color .18s ease;
+}
+.hj-nav a:hover,.hj-nav a.is-active{background:var(--hj-mist);color:var(--hj-blue);}
+.hj-header-tools{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
+.hj-search{position:relative;display:flex;align-items:center;}
+.hj-search input{
+  width:190px;padding:9px 38px 9px 14px;border-radius:999px;border:1px solid var(--hj-line);
+  background:var(--hj-paper);font-size:13.5px;color:var(--hj-ink);outline:none;
+  transition:border-color .18s ease,box-shadow .18s ease,width .2s ease;
+}
+.hj-search input:focus{border-color:var(--hj-blue);box-shadow:0 0 0 3px rgba(31,111,139,.14);width:220px;background:#fff;}
+.hj-search button{
+  position:absolute;right:5px;top:50%;transform:translateY(-50%);
+  width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:var(--hj-blue);
+}
+.hj-search button:hover{background:var(--hj-mist);}
+.hj-search-hint{
+  position:absolute;top:calc(100% + 8px);left:0;right:0;
+  background:#fff;border:1px solid var(--hj-line);border-radius:12px;
+  box-shadow:var(--hj-shadow);padding:8px;font-size:13px;color:var(--hj-muted);
+  display:none;z-index:80;
+}
+.hj-search-hint.is-open{display:block;}
+.hj-search-hint b{color:var(--hj-coral);}
+.hj-burger{
+  display:none;width:40px;height:40px;border-radius:11px;border:1px solid var(--hj-line);
+  background:#fff;place-items:center;
+}
+.hj-burger span{display:block;width:18px;height:2px;background:var(--hj-deep);margin:3px 0;border-radius:2px;transition:.22s;}
+.hj-burger.is-open span:nth-child(1){transform:translateY(5px) rotate(45deg);}
+.hj-burger.is-open span:nth-child(2){opacity:0;}
+.hj-burger.is-open span:nth-child(3){transform:translateY(-5px) rotate(-45deg);}
+.hj-mobile-nav{display:none;border-top:1px solid var(--hj-line);background:#fff;}
+.hj-mobile-nav.is-open{display:block;}
+.hj-mobile-nav a{display:block;padding:12px 6px;font-size:15px;font-weight:600;color:#26455a;border-bottom:1px dashed var(--hj-line);}
+
+/* ============ 首屏 ============ */
+.hj-hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 480px at 88% 8%,rgba(255,200,97,.22),transparent 62%),
+    radial-gradient(700px 520px at 6% 92%,rgba(31,111,139,.42),transparent 60%),
+    linear-gradient(160deg,#09202f 0%,#0f3348 46%,#15516a 100%);
+  color:#eaf3f8;
+  padding:58px 0 66px;
+}
+.hj-hero-grid{
+  display:grid;grid-template-columns:minmax(0,5fr) minmax(0,5fr);gap:52px;align-items:center;
+}
+.hj-hero-badge{
+  display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border-radius:999px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
+  font-size:12.5px;letter-spacing:.1em;color:#ffdfa2;font-weight:700;
+}
+.hj-hero-badge i{width:7px;height:7px;border-radius:50%;background:var(--hj-amber);box-shadow:0 0 0 4px rgba(255,200,97,.22);}
+.hj-hero h1{
+  font-size:clamp(34px,5.2vw,58px);line-height:1.12;font-weight:900;
+  letter-spacing:.02em;margin:20px 0 6px;color:#fff;
+}
+.hj-hero h1 em{font-style:normal;color:var(--hj-amber);}
+.hj-hero-sub{
+  font-size:14px;letter-spacing:.3em;color:#8fb9cd;text-transform:uppercase;font-weight:600;
+  margin-bottom:18px;
+}
+.hj-hero-desc{font-size:15.5px;color:#c6dbe6;max-width:56ch;}
+.hj-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+.hj-hero-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px;
+  border-top:1px solid rgba(255,255,255,.16);padding-top:24px;
+}
+.hj-hero-stat b{display:block;font-size:clamp(22px,2.6vw,30px);font-weight:900;color:#fff;letter-spacing:.01em;line-height:1.15;}
+.hj-hero-stat b small{font-size:13px;font-weight:600;color:var(--hj-amber);margin-left:3px;}
+.hj-hero-stat span{font-size:12.5px;color:#93b6c8;letter-spacing:.04em;}
+.hj-hero-visual{position:relative;}
+.hj-hero-frame{
+  border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.2);
+  box-shadow:0 40px 70px -40px rgba(0,0,0,.85);
+  aspect-ratio:16/11;background:#0a2534;
+}
+.hj-hero-frame svg{width:100%;height:100%;display:block;}
+.hj-hero-float{
+  position:static;margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;
+}
+.hj-hero-chip{
+  display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:12px;
+  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);
+  font-size:12.5px;color:#d7e8f1;font-weight:600;
+}
+.hj-hero-chip i{width:6px;height:6px;border-radius:50%;background:var(--hj-coral);}
+.hj-hero-meta{
+  margin-top:16px;display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:#8fb9cd;
+}
+.hj-hero-meta b{color:#fff;font-weight:700;}
+
+/* ============ 通用卡片 / 网格 ============ */
+.hj-grid{display:grid;gap:20px;min-width:0;}
+.hj-grid > *{min-width:0;}
+.hj-g2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.hj-g3{grid-template-columns:repeat(3,minmax(0,1fr));}
+.hj-g4{grid-template-columns:repeat(4,minmax(0,1fr));}
+.hj-card{
+  background:#fff;border:1px solid var(--hj-line);border-radius:var(--hj-radius);
+  padding:22px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+  display:flex;flex-direction:column;gap:12px;
+}
+.hj-card:hover{transform:translateY(-4px);box-shadow:var(--hj-shadow);border-color:#bcd2df;}
+
+/* ============ 关键词解析 ============ */
+.hj-about{
+  background:linear-gradient(180deg,#fff,#eef5f9);
+}
+.hj-about-grid{display:grid;grid-template-columns:minmax(0,3.4fr) minmax(0,6.6fr);gap:44px;align-items:start;}
+.hj-about-side{position:sticky;top:calc(var(--hj-sticky) + 14px);}
+.hj-about-figure{
+  margin-top:22px;border-radius:16px;overflow:hidden;border:1px solid var(--hj-line);
+  aspect-ratio:4/3;background:#dbe9f0;
+}
+.hj-about-figure svg{width:100%;height:100%;display:block;}
+.hj-about-body p{margin-bottom:16px;font-size:15.4px;color:#2d4a5c;line-height:1.85;}
+.hj-about-body p b{color:var(--hj-deep);}
+.hj-about-body .hj-h3{margin:26px 0 10px;padding-left:12px;border-left:3px solid var(--hj-coral);}
+.hj-keyline{
+  display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;
+}
+.hj-keyline span{
+  font-size:12px;font-weight:600;color:var(--hj-blue);background:var(--hj-mist);
+  border-radius:7px;padding:4px 10px;
+}
+
+/* ============ 视频流 ============ */
+.hj-video-list{display:grid;gap:18px;}
+.hj-video-item{
+  display:grid;grid-template-columns:230px minmax(0,1fr);gap:22px;
+  background:#fff;border:1px solid var(--hj-line);border-radius:var(--hj-radius);
+  padding:18px;transition:transform .2s ease,box-shadow .2s ease;
+}
+.hj-video-item:hover{transform:translateY(-3px);box-shadow:var(--hj-shadow);}
+.hj-video-cover{
+  position:relative;border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:#0d2b3d;
+}
+.hj-video-cover svg{width:100%;height:100%;display:block;}
+.hj-video-cover .hj-dur{
+  position:absolute;right:8px;bottom:8px;background:rgba(8,26,37,.82);color:#fff;
+  font-size:11px;padding:2px 7px;border-radius:6px;font-weight:600;letter-spacing:.04em;
+}
+.hj-video-body{display:flex;flex-direction:column;gap:9px;min-width:0;}
+.hj-video-title{font-size:16.5px;font-weight:800;color:var(--hj-deep);line-height:1.45;}
+.hj-video-title:hover{color:var(--hj-coral);}
+.hj-video-sum{font-size:14px;color:var(--hj-muted);line-height:1.7;}
+.hj-video-tags{display:flex;flex-wrap:wrap;gap:7px;}
+.hj-video-meta{
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px;font-size:12.5px;color:#6b8797;
+  margin-top:auto;padding-top:6px;
+}
+.hj-video-meta .hj-author-link{color:var(--hj-blue);font-weight:700;}
+.hj-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+.hj-act{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;
+  border:1px solid var(--hj-line);border-radius:999px;padding:5px 12px;color:#416276;
+  background:#fbfdfe;transition:.18s;
+}
+.hj-act:hover{border-color:var(--hj-blue);color:var(--hj-blue);background:var(--hj-mist);}
+.hj-act.is-liked{background:#ffece4;border-color:#ffc4ae;color:#c4471f;}
+.hj-act.is-saved{background:#fff2d4;border-color:#ffdb95;color:#8a5b00;}
+.hj-act .hj-ic{font-size:13px;line-height:1;}
+
+/* 重点推荐（大卡） */
+.hj-focus{display:grid;grid-template-columns:minmax(0,6.4fr) minmax(0,3.6fr);gap:24px;}
+.hj-focus-main{
+  background:#fff;border:1px solid var(--hj-line);border-radius:22px;overflow:hidden;
+  display:flex;flex-direction:column;transition:box-shadow .22s ease,transform .22s ease;
+}
+.hj-focus-main:hover{transform:translateY(-3px);box-shadow:var(--hj-shadow);}
+.hj-focus-cover{aspect-ratio:16/8.4;background:#0d2b3d;position:relative;}
+.hj-focus-cover svg{width:100%;height:100%;display:block;}
+.hj-focus-body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;}
+.hj-focus-body h3{font-size:21px;font-weight:800;color:var(--hj-deep);line-height:1.4;}
+.hj-focus-side{display:grid;gap:16px;align-content:start;}
+.hj-mini{
+  background:#fff;border:1px solid var(--hj-line);border-radius:16px;padding:16px 18px;
+  display:flex;gap:14px;transition:border-color .2s ease,transform .2s ease;
+}
+.hj-mini:hover{border-color:#bcd2df;transform:translateX(3px);}
+.hj-mini-thumb{
+  flex:0 0 76px;width:76px;height:56px;border-radius:10px;overflow:hidden;background:#14364b;
+}
+.hj-mini-thumb svg{width:100%;height:100%;display:block;}
+.hj-mini h4{font-size:14.5px;font-weight:700;color:var(--hj-deep);line-height:1.5;margin-bottom:4px;}
+.hj-mini p{font-size:12.5px;color:var(--hj-muted);line-height:1.6;}
+
+/* ============ 专题 ============ */
+.hj-topic-hero{
+  display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:0;
+  border-radius:22px;overflow:hidden;border:1px solid var(--hj-line);background:#fff;
+}
+.hj-topic-visual{background:#0d2b3d;aspect-ratio:16/11;}
+.hj-topic-visual svg{width:100%;height:100%;display:block;}
+.hj-topic-content{padding:28px 30px;display:flex;flex-direction:column;gap:14px;}
+.hj-topic-status{
+  display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;
+  color:#1b7a5a;background:#e3f6ee;padding:4px 12px;border-radius:999px;width:fit-content;
+}
+.hj-topic-status i{width:6px;height:6px;border-radius:50%;background:#1b7a5a;}
+.hj-topic-items{display:grid;gap:10px;margin-top:4px;}
+.hj-topic-items li{
+  display:flex;gap:12px;align-items:baseline;font-size:14px;color:#2d4a5c;
+  padding:9px 0;border-bottom:1px dashed var(--hj-line);
+}
+.hj-topic-items li:last-child{border-bottom:none;}
+.hj-topic-items .hj-idx{
+  flex:0 0 auto;font-size:11.5px;font-weight:800;color:var(--hj-coral);
+  background:#fff0ea;border-radius:6px;padding:1px 7px;
+}
+.hj-topic-more{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:20px;}
+
+/* ============ 作者矩阵（双列简介） ============ */
+.hj-author-card{
+  background:#fff;border:1px solid var(--hj-line);border-radius:var(--hj-radius);
+  padding:20px;display:flex;gap:16px;transition:transform .2s ease,box-shadow .2s ease;
+}
+.hj-author-card:hover{transform:translateY(-3px);box-shadow:var(--hj-shadow);}
+.hj-avatar{
+  flex:0 0 62px;width:62px;height:62px;border-radius:50%;overflow:hidden;
+  display:grid;place-items:center;font-weight:800;font-size:22px;color:#fff;
+  box-shadow:inset 0 -8px 16px rgba(0,0,0,.16);
+}
+.hj-avatar svg{width:100%;height:100%;display:block;}
+.hj-author-main{min-width:0;display:flex;flex-direction:column;gap:6px;}
+.hj-author-name{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:16px;font-weight:800;color:var(--hj-deep);}
+.hj-author-name .hj-verify{font-size:11px;font-weight:700;color:var(--hj-blue);background:var(--hj-mist);border-radius:5px;padding:1px 7px;}
+.hj-author-field{font-size:12.5px;color:var(--hj-coral);font-weight:700;}
+.hj-author-bio{font-size:13.5px;color:var(--hj-muted);line-height:1.7;}
+.hj-author-nums{display:flex;gap:16px;font-size:12px;color:#6b8797;flex-wrap:wrap;}
+.hj-author-nums b{color:var(--hj-deep);font-weight:800;}
+.hj-author-more{margin-top:2px;}
+
+/* ============ 榜单 ============ */
+.hj-rank-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.hj-rank-tab{
+  padding:7px 16px;border-radius:999px;font-size:13.5px;font-weight:700;
+  border:1px solid var(--hj-line);background:#fff;color:#416276;
+}
+.hj-rank-tab.is-active{background:var(--hj-deep);color:#fff;border-color:var(--hj-deep);}
+.hj-rank-list{display:grid;gap:10px;}
+.hj-rank-row{
+  display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:14px;align-items:center;
+  background:#fff;border:1px solid var(--hj-line);border-radius:14px;padding:13px 18px;
+  transition:border-color .18s ease,background .18s ease;
+}
+.hj-rank-row:hover{border-color:#bcd2df;background:#fbfdfe;}
+.hj-rank-no{font-size:17px;font-weight:900;color:#9fb6c4;font-style:italic;}
+.hj-rank-row:nth-child(1) .hj-rank-no{color:var(--hj-coral);}
+.hj-rank-row:nth-child(2) .hj-rank-no{color:#c98a00;}
+.hj-rank-row:nth-child(3) .hj-rank-no{color:var(--hj-blue);}
+.hj-rank-title{font-size:14.5px;font-weight:700;color:var(--hj-deep);line-height:1.5;}
+.hj-rank-sub{font-size:12px;color:var(--hj-muted);margin-top:2px;}
+.hj-rank-score{font-size:13px;font-weight:800;color:var(--hj-blue);white-space:nowrap;}
+.hj-rank-panel{display:none;}
+.hj-rank-panel.is-active{display:block;}
+
+/* ============ 评价 ============ */
+.hj-review{
+  background:#fff;border:1px solid var(--hj-line);border-radius:16px;padding:20px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.hj-review-top{display:flex;align-items:center;gap:11px;}
+.hj-review-av{
+  width:38px;height:38px;border-radius:50%;flex:0 0 38px;display:grid;place-items:center;
+  font-weight:800;font-size:15px;color:#fff;
+}
+.hj-review-name{font-size:14px;font-weight:800;color:var(--hj-deep);}
+.hj-review-meta{font-size:11.5px;color:#8aa3b1;}
+.hj-review-text{font-size:14px;color:#2d4a5c;line-height:1.8;}
+.hj-stars{color:var(--hj-amber);font-size:13px;letter-spacing:.1em;}
+.hj-score-box{
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;
+  background:linear-gradient(135deg,#0d2b3d,#15516a);color:#e8f2f8;border-radius:20px;
+  padding:24px 26px;margin-bottom:22px;
+}
+.hj-score-big{font-size:46px;font-weight:900;color:var(--hj-amber);line-height:1;letter-spacing:-.02em;}
+.hj-score-big sub{font-size:13px;color:#9dc2d4;font-weight:600;vertical-align:baseline;}
+.hj-score-bars{display:grid;gap:7px;}
+.hj-score-bar{display:grid;grid-template-columns:52px minmax(0,1fr) 40px;gap:10px;align-items:center;font-size:12px;color:#a9c9d8;}
+.hj-score-bar i{display:block;height:6px;border-radius:6px;background:rgba(255,255,255,.14);overflow:hidden;}
+.hj-score-bar i b{display:block;height:100%;background:var(--hj-amber);border-radius:6px;}
+
+/* ============ 动态 / 更新日志 ============ */
+.hj-timeline{display:grid;gap:0;border-left:2px solid var(--hj-line);margin-left:8px;padding-left:24px;}
+.hj-tl-item{position:relative;padding-bottom:24px;}
+.hj-tl-item::before{
+  content:"";position:absolute;left:-31px;top:6px;width:12px;height:12px;border-radius:50%;
+  background:#fff;border:3px solid var(--hj-blue);
+}
+.hj-tl-item.is-new::before{border-color:var(--hj-coral);box-shadow:0 0 0 5px rgba(255,122,77,.16);}
+.hj-tl-date{font-size:12px;font-weight:800;color:var(--hj-blue);letter-spacing:.05em;}
+.hj-tl-title{font-size:15px;font-weight:800;color:var(--hj-deep);margin:3px 0 4px;}
+.hj-tl-text{font-size:13.5px;color:var(--hj-muted);line-height:1.7;}
+
+/* ============ FAQ ============ */
+.hj-faq{display:grid;gap:10px;}
+.hj-faq details{
+  background:#fff;border:1px solid var(--hj-line);border-radius:14px;padding:0 18px;
+  transition:border-color .18s ease,box-shadow .18s ease;
+}
+.hj-faq details[open]{border-color:#bcd2df;box-shadow:0 12px 28px -22px rgba(11,36,54,.5);}
+.hj-faq summary{
+  list-style:none;cursor:pointer;padding:15px 0;font-size:14.5px;font-weight:700;
+  color:var(--hj-deep);display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.hj-faq summary::-webkit-details-marker{display:none;}
+.hj-faq summary::after{
+  content:"+";flex:0 0 auto;font-size:19px;font-weight:400;color:var(--hj-blue);
+  transition:transform .2s ease;line-height:1;
+}
+.hj-faq details[open] summary::after{content:"−";}
+.hj-faq-body{font-size:13.8px;color:var(--hj-muted);line-height:1.8;padding:0 0 16px;}
+
+/* ============ 合作墙 / 投稿 ============ */
+.hj-partner{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;}
+.hj-partner-item{
+  background:#fff;border:1px solid var(--hj-line);border-radius:14px;padding:16px;
+  display:flex;align-items:center;gap:12px;font-size:13.5px;font-weight:700;color:#2d4a5c;
+  transition:transform .2s ease,border-color .2s ease;
+}
+.hj-partner-item:hover{transform:translateY(-3px);border-color:#bcd2df;}
+.hj-partner-logo{
+  width:36px;height:36px;border-radius:10px;flex:0 0 36px;display:grid;place-items:center;
+  font-weight:900;font-size:14px;color:#fff;
+}
+.hj-partner-item small{display:block;font-weight:500;font-size:11.5px;color:var(--hj-muted);}
+
+.hj-submit{
+  background:linear-gradient(135deg,#0b2436,#1c5a72);border-radius:22px;color:#e8f2f8;
+  padding:34px 32px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;
+}
+.hj-submit h3{font-size:22px;font-weight:900;color:#fff;margin-bottom:8px;}
+.hj-submit p{font-size:14px;color:#b9d3df;max-width:52ch;}
+.hj-submit-actions{display:flex;flex-wrap:wrap;gap:10px;}
+
+/* ============ 页脚 ============ */
+.hj-footer{background:#081e2b;color:#a9c3d1;padding:56px 0 0;}
+.hj-footer-grid{display:grid;grid-template-columns:minmax(0,2.2fr) repeat(3,minmax(0,1fr));gap:34px;padding-bottom:38px;}
+.hj-footer .hj-brand-name{color:#fff;}
+.hj-footer .hj-brand-sub{color:#7fa2b5;}
+.hj-footer-desc{font-size:13.5px;line-height:1.9;color:#93b3c4;margin-top:16px;max-width:40ch;}
+.hj-footer h4{font-size:13.5px;color:#fff;font-weight:800;letter-spacing:.06em;margin-bottom:14px;}
+.hj-footer-links{display:grid;gap:9px;font-size:13.2px;}
+.hj-footer-links a:hover{color:var(--hj-amber);}
+.hj-footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);padding:20px 0 26px;
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
+  font-size:12.4px;color:#7c9cad;
+}
+.hj-footer-bottom b{color:#c9dce6;}
+
+/* ============ Toast / 弹窗 / 回到顶部 ============ */
+.hj-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:#0d2b3d;color:#fff;font-size:13.5px;font-weight:600;
+  padding:11px 20px;border-radius:12px;box-shadow:0 20px 40px -20px rgba(0,0,0,.7);
+  opacity:0;pointer-events:none;transition:.28s;z-index:300;max-width:88vw;text-align:center;
+}
+.hj-toast.is-show{opacity:1;transform:translate(-50%,0);}
+.hj-modal{
+  position:fixed;inset:0;background:rgba(6,20,29,.62);backdrop-filter:blur(3px);
+  display:none;place-items:center;padding:20px;z-index:260;
+}
+.hj-modal.is-open{display:grid;}
+.hj-modal-box{
+  background:#fff;border-radius:20px;width:min(540px,96vw);max-height:86vh;overflow:auto;
+  padding:26px;box-shadow:0 40px 80px -40px rgba(0,0,0,.7);
+}
+.hj-modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:14px;}
+.hj-modal-head h3{font-size:18px;font-weight:900;color:var(--hj-deep);line-height:1.4;}
+.hj-modal-close{width:34px;height:34px;border-radius:50%;background:var(--hj-mist);color:var(--hj-blue);font-size:18px;display:grid;place-items:center;flex:0 0 34px;}
+.hj-modal-close:hover{background:#dbe9f0;}
+.hj-form{display:grid;gap:12px;}
+.hj-form label{font-size:13px;font-weight:700;color:var(--hj-deep);display:block;margin-bottom:5px;}
+.hj-form input,.hj-form textarea,.hj-form select{
+  width:100%;border:1px solid var(--hj-line);border-radius:10px;padding:10px 12px;
+  font-size:14px;font-family:inherit;color:var(--hj-ink);background:var(--hj-paper);outline:none;
+}
+.hj-form input:focus,.hj-form textarea:focus,.hj-form select:focus{border-color:var(--hj-blue);background:#fff;box-shadow:0 0 0 3px rgba(31,111,139,.12);}
+.hj-form textarea{min-height:92px;resize:vertical;}
+.hj-form-note{font-size:12px;color:var(--hj-muted);}
+.hj-to-top{
+  position:fixed;right:20px;bottom:22px;width:46px;height:46px;border-radius:50%;
+  background:var(--hj-deep);color:#fff;font-size:18px;display:grid;place-items:center;
+  box-shadow:0 16px 30px -16px rgba(0,0,0,.7);opacity:0;pointer-events:none;transition:.25s;z-index:200;
+}
+.hj-to-top.is-show{opacity:1;pointer-events:auto;}
+.hj-to-top:hover{background:var(--hj-coral);}
+
+/* ============ 响应式 ============ */
+@media (max-width:1024px){
+  .hj-hero-grid{grid-template-columns:1fr;gap:34px;}
+  .hj-about-grid{grid-template-columns:1fr;gap:26px;}
+  .hj-about-side{position:static;}
+  .hj-focus{grid-template-columns:1fr;}
+  .hj-topic-hero{grid-template-columns:1fr;}
+  .hj-g4{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .hj-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:860px){
+  :root{--hj-sticky:106px;}
+  .hj-nav{display:none;}
+  .hj-burger{display:grid;}
+  .hj-search input{width:150px;}
+  .hj-search input:focus{width:170px;}
+  .hj-g3,.hj-topic-more{grid-template-columns:1fr;}
+  .hj-video-item{grid-template-columns:1fr;gap:14px;}
+  .hj-video-cover{aspect-ratio:16/9;}
+  .hj-partner{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .hj-submit{grid-template-columns:1fr;}
+  .hj-hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;}
+}
+@media (max-width:640px){
+  .hj-section{padding:44px 0;}
+  .hj-g2,.hj-g4{grid-template-columns:1fr;}
+  .hj-score-box{grid-template-columns:1fr;gap:14px;}
+  .hj-footer-grid{grid-template-columns:1fr;gap:26px;}
+  .hj-header-tools .hj-search{display:none;}
+  .hj-hero{padding:40px 0 46px;}
+  .hj-notice-text{white-space:normal;font-size:12.5px;}
+  .hj-tl-item{padding-bottom:20px;}
+  .hj-author-card{flex-direction:row;}
+  .hj-hero-stats{grid-template-columns:1fr 1fr;}
+  .hj-hero-stat:last-child{grid-column:span 2;}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- ================= 吸顶：公告条 + 页头 ================= -->
+<div class="hj-top">
+  <div class="hj-notice">
+    <div class="hj-wrap hj-notice-inner">
+      <span class="hj-notice-tag">最新发布</span>
+      <p class="hj-notice-text"><strong>海角专区·冬季影像企划</strong> 已上线 12 支原创短片，新增「海岸线记事」专题投稿通道，创作者报名同步开放。</p>
+      <a class="hj-notice-link" href="#hj-updates">查看更新日志 →</a>
+    </div>
+  </div>
+
+  <header class="hj-header">
+    <div class="hj-wrap hj-header-inner">
+      <a class="hj-brand" href="#hj-top-anchor" aria-label="海角专区官方网站首页">
+        <span class="hj-brand-mark" aria-hidden="true">海</span>
+        <span>
+          <span class="hj-brand-name">海角专区</span>
+          <span class="hj-brand-sub">Haijiao Video</span>
+        </span>
+      </a>
+
+      <nav class="hj-nav" aria-label="主导航">
+        <a href="#hj-about" class="is-active">品牌解析</a>
+        <a href="#hj-focus">焦点内容</a>
+        <a href="#hj-topics">专题企划</a>
+        <a href="#hj-videos">视频社区</a>
+        <a href="#hj-authors">创作者</a>
+        <a href="#hj-rank">数据榜单</a>
+        <a href="#hj-reviews">用户口碑</a>
+        <a href="#hj-faq">帮助</a>
+      </nav>
+
+      <div class="hj-header-tools">
+        <div class="hj-search">
+          <input id="hjSearchInput" type="search" placeholder="搜索视频 / 创作者 / 专题" aria-label="站内搜索">
+          <button id="hjSearchBtn" type="button" aria-label="搜索">🔍</button>
+          <div class="hj-search-hint" id="hjSearchHint"></div>
+        </div>
+        <button class="hj-btn hj-btn-primary hj-btn-sm" id="hjSubmitTop" type="button">投稿报名</button>
+        <button class="hj-burger" id="hjBurger" type="button" aria-label="展开导航" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="hj-mobile-nav" id="hjMobileNav">
+      <div class="hj-wrap">
+        <a href="#hj-about">品牌解析</a>
+        <a href="#hj-focus">焦点内容</a>
+        <a href="#hj-topics">专题企划</a>
+        <a href="#hj-videos">视频社区</a>
+        <a href="#hj-authors">创作者</a>
+        <a href="#hj-rank">数据榜单</a>
+        <a href="#hj-reviews">用户口碑</a>
+        <a href="#hj-updates">企业动态</a>
+        <a href="#hj-faq">帮助与联系</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<span id="hj-top-anchor"></span>
+
+<!-- ================= 首屏 ================= -->
+<section class="hj-hero" id="hj-hero">
+  <div class="hj-wrap hj-hero-grid">
+    <div>
+      <span class="hj-hero-badge"><i aria-hidden="true"></i>海角专区官方网站 · 企业级视频品牌</span>
+      <h1>海角专区</h1>
+      <p class="hj-hero-sub">Original · HD · Community</p>
+      <p class="hj-hero-desc">海角专区是面向创作者与观众的原生视频品牌官网，以海为叙事起点，持续产出真实、温暖、可被反复观看的精品影像，构建从内容生产到社区互动的完整内容生态。</p>
+
+      <div class="hj-hero-actions">
+        <a class="hj-btn hj-btn-primary" href="#hj-videos">进入视频社区</a>
+        <a class="hj-btn hj-btn-ghost" href="#hj-topics">浏览专题企划</a>
+        <button class="hj-btn hj-btn-ghost" id="hjShareHero" type="button">分享本页</button>
+      </div>
+
+      <div class="hj-hero-stats">
+        <div class="hj-hero-stat"><b>1,286<small>+</small></b><span>原创高清作品</span></div>
+        <div class="hj-hero-stat"><b>240<small>万</small></b><span>社区用户共同观看</span></div>
+        <div class="hj-hero-stat"><b>96<small>%</small></b><span>用户口碑好评度</span></div>
+      </div>
+    </div>
+
+    <div class="hj-hero-visual">
+      <div class="hj-hero-frame">
+        <svg viewBox="0 0 800 560" role="img" aria-label="海角专区品牌主视觉：黄昏海崖与灯塔，前景有取景框与播放标识">
+          <defs>
+            <linearGradient id="hjSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0a2233"/>
+              <stop offset="46%" stop-color="#1d5a76"/>
+              <stop offset="74%" stop-color="#df8a5a"/>
+              <stop offset="100%" stop-color="#f7c98a"/>
+            </linearGradient>
+            <linearGradient id="hjSea" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#15516a"/>
+              <stop offset="100%" stop-color="#081e2b"/>
+            </linearGradient>
+            <linearGradient id="hjCliff" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#20262c"/>
+              <stop offset="100%" stop-color="#0b1419"/>
+            </linearGradient>
+            <radialGradient id="hjGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffe6b0" stop-opacity=".95"/>
+              <stop offset="100%" stop-color="#ffe6b0" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="800" height="560" fill="url(#hjSky)"/>
+          <circle cx="600" cy="252" r="120" fill="url(#hjGlow)"/>
+          <circle cx="600" cy="252" r="42" fill="#ffe0a3"/>
+          <ellipse cx="600" cy="334" rx="180" ry="9" fill="#f7c98a" opacity=".38"/>
+          <path d="M0 336 H800 V560 H0 Z" fill="url(#hjSea)"/>
+          <path d="M0 372 Q120 356 240 372 T480 372 T720 372 T800 372 V560 H0 Z" fill="#0f3d52" opacity=".7"/>
+          <path d="M0 420 Q100 404 200 420 T400 420 T600 420 T800 420 V560 H0 Z" fill="#0a2b3a" opacity=".75"/>
+          <path d="M0 484 Q90 466 180 484 T360 484 T540 484 T720 484 T800 484 V560 H0 Z" fill="#071d28" opacity=".85"/>
+          <path d="M0 560 V404 L96 356 L168 388 L214 340 L292 372 L292 560 Z" fill="url(#hjCliff)"/>
+          <path d="M292 560 V336 L338 308 L382 336 L418 316 L462 356 L462 560 Z" fill="#141c22"/>
+          <path d="M96 356 L118 300 L146 302 L168 388 Z" fill="#2a3239"/>
+          <rect x="196" y="248" width="12" height="132" rx="3" fill="#e9f1f5"/>
+          <rect x="176" y="238" width="52" height="34" rx="6" fill="#ffc861"/>
+          <rect x="176" y="238" width="52" height="34" rx="6" fill="none" stroke="#8a5b00" stroke-width="2"/>
+          <path d="M202 238 L202 216 L224 216 L224 238 Z" fill="#ff7a4d"/>
+          <path d="M118 300 q10 -16 24 -6 q12 -14 26 -2" stroke="#ffc861" stroke-width="3" fill="none" opacity=".8" stroke-linecap="round"/>
+          <g opacity=".9">
+            <rect x="356" y="392" width="256" height="144" rx="14" fill="none" stroke="#eaf3f8" stroke-width="3" opacity=".55"/>
+            <path d="M356 392 h30 M356 392 v30 M612 536 h-30 M612 536 v-30" stroke="#ffc861" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="484" cy="464" r="34" fill="rgba(255,255,255,.16)" stroke="#fff" stroke-width="2"/>
+            <path d="M474 448 L504 464 L474 480 Z" fill="#fff"/>
+          </g>
+          <g stroke="#8fb9cd" stroke-width="2" fill="none" opacity=".6">
+            <path d="M560 96 q14 -18 28 0 q14 -18 28 0"/>
+            <path d="M624 128 q10 -13 20 0 q10 -13 20 0"/>
+          </g>
+        </svg>
+      </div>
+      <div class="hj-hero-float">
+        <span class="hj-hero-chip"><i aria-hidden="true"></i>4K 高清原生画质</span>
+        <span class="hj-hero-chip"><i aria-hidden="true"></i>创作者实名认证</span>
+        <span class="hj-hero-chip"><i aria-hidden="true"></i>正版内容授权</span>
+      </div>
+      <div class="hj-hero-meta">
+        <span>本期主推 · <b>《潮线以北》第 3 集</b></span>
+        <span>时长 <b>18:42</b></span>
+        <span>播放 <b>32.6 万</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 品牌解析（关键词解析 800 字以上） ================= -->
+<section class="hj-section hj-about" id="hj-about">
+  <div class="hj-wrap hj-about-grid">
+    <div class="hj-about-side">
+      <span class="hj-eyebrow">Brand Analysis</span>
+      <h2 class="hj-h2">关于<span class="hj-accent">海角专区</span>这个品牌</h2>
+      <p class="hj-lead" style="margin-top:12px;">一个以海为坐标的原创视频品牌，如何把「专区」做成值得长期停留的内容生态。</p>
+      <div class="hj-about-figure">
+        <svg viewBox="0 0 640 480" role="img" aria-label="海角专区品牌解析配图：航海图式构图与内容分区坐标网格">
+          <rect width="640" height="480" fill="#e9f1f5"/>
+          <g stroke="#c2d7e2" stroke-width="1">
+            <path d="M0 60 H640 M0 120 H640 M0 180 H640 M0 240 H640 M0 300 H640 M0 360 H640 M0 420 H640"/>
+            <path d="M80 0 V480 M160 0 V480 M240 0 V480 M320 0 V480 M400 0 V480 M480 0 V480 M560 0 V480"/>
+          </g>
+          <path d="M40 400 Q160 300 220 330 T400 250 T600 120" fill="none" stroke="#1f6f8b" stroke-width="4" stroke-dasharray="10 9" stroke-linecap="round"/>
+          <circle cx="220" cy="330" r="10" fill="#ff7a4d"/>
+          <circle cx="400" cy="250" r="10" fill="#ffc861"/>
+          <circle cx="600" cy="120" r="12" fill="#0b2436"/>
+          <g fill="#0b2436">
+            <path d="M120 96 l26 14 l-26 14 z"/>
+          </g>
+          <g fill="#123c55">
+            <rect x="92" y="150" width="104" height="10" rx="5"/>
+            <rect x="92" y="170" width="72" height="8" rx="4" opacity=".6"/>
+            <rect x="330" y="360" width="150" height="10" rx="5"/>
+            <rect x="330" y="380" width="108" height="8" rx="4" opacity=".6"/>
+          </g>
+          <rect x="446" y="308" width="150" height="96" rx="12" fill="#fff" stroke="#c2d7e2"/>
+          <rect x="466" y="330" width="60" height="8" rx="4" fill="#ff7a4d"/>
+          <rect x="466" y="350" width="104" height="7" rx="3.5" fill="#9fb6c4"/>
+          <rect x="466" y="368" width="84" height="7" rx="3.5" fill="#c2d7e2"/>
+        </svg>
+      </div>
+      <div class="hj-keyline" aria-label="品牌关键词">
+        <span>官方网站</span><span>原创正版</span><span>内容生态</span>
+        <span>持续运营</span><span>匠心品质</span><span>社区共创</span>
+      </div>
+    </div>
+
+    <div class="hj-about-body">
+      <p><b>海角专区</b>并不是一个单纯堆叠视频的播放列表，而是一个被长期运营的原创影像品牌。我们把「海角」视为地理坐标，也视为心理坐标——它指向那些远离喧嚣、但仍然拥有强烈表达欲的角落。作为一家持续运营的视频企业，海角专区官方网站承载的不只是播放功能：它同时是创作者的作品档案室、观众的内容索引，以及品牌与社区之间公开对话的窗口。打开首页，你能看到最新企划的更新状态、本周焦点片单、创作者名录与真实评价，这些信息共同构成一个可被验证的内容生态，而不是一张漂亮却空洞的门面。</p>
+
+      <p>从品牌定位上说，海角专区的核心是「真实 + 匠心」。真实意味着我们不做过度包装的情绪速食，镜头里出现的风、潮汐、街巷、手艺人手上的裂口，都是真实发生过的细节；匠心意味着我们愿意为了一支 12 分钟的短片，花三周时间等一场合适的退潮。这种近乎笨拙的坚持，让海角专区在垂直领域里慢慢积累起口碑，也让「海角专区」这四个字逐渐成为一部分观众心中「值得信赖的影像出处」。</p>
+
+      <h3 class="hj-h3">一、为什么是「海角专区」：品牌命名的三层含义</h3>
+      <p>第一层是地理含义。海角是陆地伸向海面的尽头，天然带有边界感与探索感，这与我们偏爱的户外、城市边缘、在地文化题材高度契合。第二层是内容含义。「专区」在中文语境中意味着被单独划分、被认真对待的区域，它对应我们为不同题材建立的独立策展空间——海岸线记事、手艺人的一天、城市退潮时刻等，每个专区都有自己的更新节奏与选片标准。第三层是关系含义。海角不是一个高高在上的展示台，而是一个可以停靠的码头：创作者在这里靠岸、补给、再出发，观众在这里停留、提问、留下评论。三层含义叠加，才构成了海角专区官方网站今天的样子。</p>
+
+      <p>也正因如此，我们从不把海角专区当作一个流量漏斗来设计。页面上没有逼迫式的弹窗，没有夸张的倒计时，取而代之的是清晰的分类、可追溯的更新时间、以及每支视频下方完整的作者与数据信息。这些看起来「不够刺激」的设计，恰恰是海角专区作为企业级视频品牌对用户至上的理解：尊重观众的时间，也尊重创作者的劳动。</p>
+
+      <h3 class="hj-h3">二、内容生态如何运转：从一支短片到一片海域</h3>
+      <p>海角专区的内容生态分为三个层次。最底层是日常更新，主要由社区创作者投稿构成，题材覆盖日常记录、手作、美食、户外、萌宠等，频率高、颗粒度细，保证专区始终有新鲜内容流动。中间层是品牌自制企划，由编辑部与签约创作者共同完成，周期通常在四到六周，从选题、勘景、拍摄到后期都有明确规范，是海角专区品质口碑的主要来源。最上层是年度专题，比如今年的「海岸线记事」与「城市退潮时刻」，它们不只产出视频，还会沉淀图文索引、创作者访谈与方法论复盘，成为可被反复引用的品牌资产。</p>
+
+      <p>三层内容之间并非彼此孤立。一支普通投稿如果数据与口碑表现突出，会被编辑推荐进入焦点内容，获得更好的曝光位；一个年度专题结束后，其中表现优异的创作者会被邀请参与下一季的自制企划。这种「社区—企划—专题」的流动机制，让海角专区的内容生态保持活性，也让创作者的成长路径变得清晰可见：从第一次上传，到进入榜单，再到拥有自己的专题，每一步都有对应的入口与反馈。</p>
+
+      <h3 class="hj-h3">三、创作者与社区：把「专区」做成共同作品</h3>
+      <p>海角专区的创作者结构相当多元。有常年在海边拍摄潮汐与候鸟的户外作者，有专注老手艺记录的手作博主，也有只用一台手机拍城市街角的日常记录者。我们并不以设备或粉丝量作为唯一门槛，而是更看重内容的真实度与持续性。每位通过认证的创作者，都会在作者页获得完整的作品列表、擅长领域与简介，观众可以点开作者信息，看到这个人到底在拍什么、为什么拍。这种透明度，是海角专区作为社区平台对「值得信赖」四个字最具体的落实。</p>
+
+      <p>社区互动同样是品牌的一部分。我们保留评论区，但不做无意义的热度竞赛；我们设置点赞与收藏，但更在意收藏率这类反映内容长期价值的指标。每季度，海角专区会公布一次内容更新日志与创作者招募计划，把平台的规则、方向与不足公开写出来，接受用户监督。这种开放姿态，让海角专区不只是一个品牌名，而是一群人对「什么样的影像值得被留下」的持续讨论。</p>
+
+      <h3 class="hj-h3">四、面向未来：保持垂直，保持创新</h3>
+      <p>接下来的一年，海角专区会继续深耕影像这一垂直领域，同时尝试更多元的表达方式：纪录片式的长片、竖屏微纪录、创作者对谈直播，以及把线下放映带入沿海小城的社区计划。我们相信，一个视频品牌真正的护城河不是流量，而是内容与观众之间建立的长期信任。海角专区愿意用更慢的节奏、更清晰的规则、更完整的档案，去经营这份信任。这也是海角专区官方网站存在的意义：它是入口，也是承诺。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 焦点内容 ================= -->
+<section class="hj-section" id="hj-focus">
+  <div class="hj-wrap">
+    <div class="hj-sec-head">
+      <div>
+        <span class="hj-eyebrow">Editor's Pick</span>
+        <h2 class="hj-h2">海角专区<span class="hj-accent">焦点内容</span>与本周精选</h2>
+        <p class="hj-lead" style="margin-top:10px;">由编辑团队从近期投稿与自制企划中挑出的重点作品，兼顾题材差异与观看完成度。</p>
+      </div>
+      <a class="hj-btn hj-btn-outline hj-btn-sm" href="#hj-videos">查看全部视频</a>
+    </div>
+
+    <div class="hj-focus">
+      <article class="hj-focus-main">
+        <div class="hj-focus-cover">
+          <svg viewBox="0 0 800 420" role="img" aria-label="焦点内容《潮线以北》封面：礁石海岸线与退潮后的浅滩">
+            <defs>
+              <linearGradient id="hjF1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#123c55"/>
+                <stop offset="58%" stop-color="#2b7f9e"/>
+                <stop offset="100%" stop-color="#cfe4ec"/>
+              </linearGradient>
+            </defs>
+            <rect width="800" height="420" fill="url(#hjF1)"/>
+            <circle cx="640" cy="120" r="58" fill="#ffe6b0" opacity=".9"/>
+            <path d="M0 262 Q120 236 240 258 T480 258 T720 254 T800 258 V420 H0 Z" fill="#1b5c75" opacity=".62"/>
+            <path d="M0 300 Q140 276 260 300 T520 300 T800 296 V420 H0 Z" fill="#0f3d52" opacity=".82"/>
+            <path d="M0 352 Q120 330 240 352 T480 352 T720 348 T800 352 V420 H0 Z" fill="#092530"/>
+            <path d="M120 420 L150 320 L182 300 L214 330 L232 420 Z" fill="#232b30"/>
+            <path d="M420 420 L444 344 L470 330 L492 356 L504 420 Z" fill="#1a2227"/>
+            <g fill="#eaf3f8" opacity=".8">
+              <path d="M300 250 q10 -12 20 0 q10 -12 20 0" stroke="#eaf3f8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M356 226 q8 -10 16 0 q8 -10 16 0" stroke="#eaf3f8" stroke-width="2" fill="none" stroke-linecap="round"/>
+            </g>
+            <rect x="24" y="24" width="140" height="34" rx="17" fill="rgba(8,26,37,.7)"/>
+            <text x="46" y="46" font-family="sans-serif" font-size="15" fill="#ffc861" font-weight="700">品牌自制</text>
+          </svg>
+        </div>
+        <div class="hj-focus-body">
+          <div class="hj-video-tags">
+            <span class="hj-pill is-coral">年度专题</span>
+            <span class="hj-pill">海岸线记事</span>
+            <span class="hj-pill is-amber">4K 高清</span>
+          </div>
+          <h3>《潮线以北》：用一整个退潮周期，记录海角专区最安静的三公里</h3>
+          <p class="hj-video-sum">摄制组在北方一段无人礁岸驻扎十九天，跟随潮汐表拍摄涨落之间的地貌变化。影片没有旁白，依靠环境声与手写体字幕推进叙事，是海角专区今年在长镜头语言上最具野心的一次尝试。</p>
+          <div class="hj-video-meta">
+            <span>作者 <a class="hj-author-link" href="#hj-authors">岸线档案室</a></span>
+            <span>播放 <b>32.6 万</b></span>
+            <span>点赞 <b id="hjFocusLike">8,412</b></span>
+            <span>收藏 <b>5,203</b></span>
+            <span>时长 18:42</span>
+          </div>
+          <div class="hj-actions">
+            <button class="hj-act" type="button" data-hj-like data-target="hjFocusLike" data-count="8412"><span class="hj-ic">👍</span>点赞</button>
+            <button class="hj-act" type="button" data-hj-save><span class="hj-ic">♡</span>收藏</button>
+            <button class="hj-act" type="button" data-hj-copy>复制链接</button>
+            <button class="hj-act" type="button" data-hj-report>反馈</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="hj-focus-side">
+        <article class="hj-mini">
+          <span class="hj-mini-thumb" aria-hidden="true">
+            <svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#f3e6d4"/><circle cx="120" cy="34" r="20" fill="#ffb27a"/><path d="M0 92 Q40 70 80 88 T160 84 V120 H0 Z" fill="#c98a5a"/><rect x="18" y="28" width="44" height="8" rx="4" fill="#8a5b00"/><rect x="18" y="44" width="30" height="6" rx="3" fill="#b98a4e"/></svg>
+          </span>
+          <div>
+            <h4>《手艺人第 14 期》：一把藤椅要编满 43 个小时</h4>
+            <p>手作 · 深度记录 · 播放 11.4 万</p>
+          </div>
+        </article>
+        <article class="hj-mini">
+          <span class="hj-mini-thumb" aria-hidden="true">
+            <svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#dbe9f0"/><rect x="18" y="60" width="26" height="42" fill="#1f6f8b"/><rect x="52" y="42" width="26" height="60" fill="#15516a"/><rect x="86" y="26" width="26" height="76" fill="#0b2436"/><rect x="120" y="52" width="22" height="50" fill="#ff7a4d"/><circle cx="40" cy="24" r="10" fill="#ffc861"/></svg>
+          </span>
+          <div>
+            <h4>《城市退潮时刻》：晚上十点后的沿海公路</h4>
+            <p>城市探索 · 声景 · 播放 9.8 万</p>
+          </div>
+        </article>
+        <article class="hj-mini">
+          <span class="hj-mini-thumb" aria-hidden="true">
+            <svg viewBox="0 0 160 120"><rect width="160" height="120" fill="#e3f6ee"/><path d="M0 100 Q50 60 90 84 T160 70 V120 H0 Z" fill="#2f8f6d"/><circle cx="118" cy="34" r="16" fill="#ffc861"/><path d="M40 70 q12 -18 26 -4" stroke="#0b2436" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+          </span>
+          <div>
+            <h4>《候鸟停靠日》：迁徙季的三天两夜蹲守</h4>
+            <p>户外 · 自然观察 · 播放 7.2 万</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 专题企划 ================= -->
+<section class="hj-section" id="hj-topics" style="background:linear-gradient(180deg,#eef5f9,#f7fafc);">
+  <div class="hj-wrap">
+    <div class="hj-sec-head">
+      <div>
+        <span class="hj-eyebrow">Special Projects</span>
+        <h2 class="hj-h2">海角专区<span class="hj-accent">专题企划</span>正在更新</h2>
+        <p class="hj-lead" style="margin-top:10px;">每个专题由编辑与创作者共同策划，包含独立选片标准与更新节奏，欢迎持续追更与投稿。</p>
+      </div>
+    </div>
+
+    <div class="hj-topic-hero">
+      <div class="hj-topic-visual">
+        <svg viewBox="0 0 640 440" role="img" aria-label="专题企划主视觉：海岸线地图与拍摄勘景标记点">
+          <rect width="640" height="440" fill="#0f3348"/>
+          <path d="M0 300 Q90 258 170 292 T330 280 T470 300 T640 264 V440 H0 Z" fill="#15516a"/>
+          <path d="M0 356 Q110 322 210 352 T420 344 T640 330 V440 H0 Z" fill="#0a2b3a"/>
+          <g stroke="#ffc861" stroke-width="3" fill="none" stroke-linecap="round">
+            <path d="M96 214 q18 -26 36 0 q18 -26 36 0"/>
+            <path d="M280 176 q14 -20 28 0 q14 -20 28 0"/>
+          </g>
+          <g fill="#ff7a4d">
+            <circle cx="180" cy="286" r="9"/><circle cx="366" cy="262" r="9"/><circle cx="512" cy="288" r="9"/>
+          </g>
+          <g stroke="#eaf3f8" stroke-width="2" stroke-dasharray="7 7" opacity=".65">
+            <path d="M180 286 Q280 230 366 262 T512 288"/>
+          </g>
+          <rect x="60" y="60" width="196" height="14" rx="7" fill="#eaf3f8" opacity=".9"/>
+          <rect x="60" y="86" width="132" height="10" rx="5" fill="#8fb9cd" opacity=".8"/>
+          <rect x="60" y="110" width="164" height="8" rx="4" fill="#5b879c" opacity=".7"/>
+        </svg>
+      </div>
+      <div class="hj-topic-content">
+        <span class="hj-topic-status"><i aria-hidden="true"></i>连载中 · 已更新 12 支</span>
+        <h3 class="hj-h3" style="font-size:22px;">海岸线记事：把整条海岸线拆成可被记住的段落</h3>
+        <p class="hj-lead">从北到南，摄制组沿坐标逐段记录海崖、渔港、滩涂与灯塔。每支短片聚焦一个具体地点与一个具体的人，配上手绘勘景地图与拍摄笔记，构成海角专区年度最具分量的专题。</p>
+        <ul class="hj-topic-items">
+          <li><span class="hj-idx">01</span><span>《灯塔看守人的第 27 个冬天》：一个人的值班室与一整面海</span></li>
+          <li><span class="hj-idx">02</span><span>《潮间带笔记》：退潮后两小时，滩涂上出现的一整套生态</span></li>
+          <li><span class="hj-idx">03</span><span>《渔港早市》：凌晨四点，最后一艘归港的船</span></li>
+        </ul>
+        <div class="hj-actions">
+          <button class="hj-btn hj-btn-primary hj-btn-sm" type="button" data-hj-submit>投稿本专题</button>
+          <button class="hj-btn hj-btn-outline hj-btn-sm" type="button" data-hj-copy>复制专题链接</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hj-topic-more">
+      <article class="hj-card">
+        <span class="hj-pill is-amber">更新至第 6 期</span>
+        <h3 class="hj-h3">手作人的一天</h3>
+        <p class="hj-video-sum">走进藤编、木作、陶艺、蓝染四类手作现场，用一天的时间尺度呈现手艺的真实节奏，不做快剪，不配煽情配乐。</p>
+        <ul class="hj-topic-items">
+          <li><span class="hj-idx">01</span><span>《藤椅的 43 小时》：从选料到上油的全过程</span></li>
+          <li><span class="hj-idx">02</span><span>《一只陶碗的 11 次失败》</span></li>
+          <li><span class="hj-idx">03</span><span>《蓝染缸边的清晨》</span></li>
+        </ul>
+      </article>
+      <article class="hj-card">
+        <span class="hj-pill">策划中 · 预计 12 月上线</span>
+        <h3 class="hj-h3">城市退潮时刻</h3>
+        <p class="hj-video-sum">不拍高楼与霓虹，只拍一天结束之后城市慢慢退去喧嚣的那段时间：末班车、收摊的夜市、关灯的写字楼。</p>
+        <ul class="hj-topic-items">
+          <li><span class="hj-idx">01</span><span>《十点半的沿海公路》</span></li>
+          <li><span class="hj-idx">02</span><span>《夜市收摊的最后一小时》</span></li>
+          <li><span class="hj-idx">03</span><span>《关机之后：一间便利店的值守》</span></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 视频社区（文字列表） ================= -->
+<section class="hj-section" id="hj-videos">
+  <div class="hj-wrap">
+    <div class="hj-sec-head">
+      <div>
+        <span class="hj-eyebrow">Community Feed</span>
+        <h2 class="hj-h2">海角专区<span class="hj-accent">视频社区</span>最新投稿</h2>
+        <p class="hj-lead" style="margin-top:10px;">来自社区创作者的真实更新，每条都附作者、标签与互动数据，点击可查看详情与评论。</p>
+      </div>
+      <div class="hj-rank-tabs" id="hjVideoFilter" style="margin-bottom:0;">
+        <button class="hj-rank-tab is-active" type="button" data-filter="all">全部</button>
+        <button class="hj-rank-tab" type="button" data-filter="户外">户外</button>
+        <button class="hj-rank-tab" type="button" data-filter="手作">手作</button>
+        <button class="hj-rank-tab" type="button" data-filter="城市">城市</button>
+        <button class="hj-rank-tab" type="button" data-filter="美食">美食</button>
+      </div>
+    </div>
+
+    <div class="hj-video-list" id="hjVideoList">
+      <article class="hj-video-item" data-tags="户外 海岸线记事">
+        <div class="hj-video-cover">
+          <svg viewBox="0 0 360 202" role="img" aria-label="视频封面：候鸟停在退潮后的滩涂上与远处观测者剪影">
+            <rect width="360" height="202" fill="#cfe4ec"/>
+            <path d="M0 128 Q60 108 110 126 T230 122 T360 118 V202 H0 Z" fill="#2b7f9e"/>
+            <path d="M0 158 Q70 142 140 158 T280 154 T360 158 V202 H0 Z" fill="#123c55"/>
+            <g stroke="#0b2436" stroke-width="3" fill="none" stroke-linecap="round">
+              <path d="M180 96 q10 -14 20 0 q10 -14 20 0"/>
+              <path d="M236 82 q8 -11 16 0 q8 -11 16 0"/>
+            </g>
+            <path d="M74 156 l6 -22 h12 l6 22 z" fill="#0b2436"/>
+            <circle cx="86" cy="128" r="6" fill="#0b2436"/>
+            <circle cx="300" cy="46" r="18" fill="#ffe6b0"/>
+          </svg>
+          <span class="hj-dur">09:16</span>
+        </div>
+        <div class="hj-video-body">
+          <div class="hj-video-tags"><span class="hj-pill">户外</span><span class="hj-pill is-amber">自然观察</span></div>
+          <h3 class="hj-video-title">迁徙季蹲守第三天：候鸟落在我搭的观测棚外十米处</h3>
+          <p class="hj-video-sum">凌晨四点半进棚，靠一块伪装网和一壶热水撑到天亮。观察笔记同步更新在评论区，包含潮位、风向与鸟群数量。</p>
+          <div class="hj-video-meta">
+            <span>作者 <a class="hj-author-link" href="#hj-authors">潮汐观测员</a></span>
+            <span>播放 <b>7.2 万</b></span>
+            <span>点赞 <b id="hjLike1">2,140</b></span>
+            <span>收藏 <b>861</b></span>
+          </div>
+          <div class="hj-actions">
+            <button class="hj-act" type="button" data-hj-like data-target="hjLike1" data-count="2140"><span class="hj-ic">👍</span>点赞</button>
+            <button class="hj-act" type="button" data-hj-save><span class="hj-ic">♡</span>收藏</button>
+            <button class="hj-act" type="button" data-hj-copy>复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="hj-video-item" data-tags="手作">
+        <div class="hj-video-cover">
+          <svg viewBox="0 0 360 202" role="img" aria-label="视频封面：藤编工作台与半成品的藤椅框架">
+            <rect width="360" height="202" fill="#f3e6d4"/>
+            <rect x="0" y="150" width="360" height="52" fill="#c98a5a"/>
+            <g stroke="#8a5b00" stroke-width="5" fill="none" stroke-linecap="round">
+              <path d="M96 150 L96 70 L210 70 L210 150"/>
+              <path d="M110 150 L110 92 L196 92 L196 150"/>
+              <path d="M126 150 L126 112 L180 112 L180 150"/>
+            </g>
+            <rect x="236" y="86" width="72" height="12" rx="6" fill="#8a5b00"/>
+            <rect x="236" y="108" width="52" height="9" rx="4.5" fill="#b98a4e"/>
+            <circle cx="286" cy="52" r="16" fill="#ffb27a"/>
+          </svg>
+          <span class="hj-dur">14:05</span>
+        </div>
+        <div class="hj-video-body">
+          <div class="hj-video-tags"><span class="hj-pill is-amber">手作</span><span class="hj-pill">深度记录</span></div>
+          <h3 class="hj-video-title">一把藤椅要编满 43 个小时：我把计时器架在了工作台上</h3>
+          <p class="hj-video-sum">没有加速，没有跳剪，镜头里的每一根藤条都走完自己的路径。视频末尾附工具清单与新手最容易踩的四个坑。</p>
+          <div class="hj-video-meta">
+            <span>作者 <a class="hj-author-link" href="#hj-authors">南岸手作间</a></span>
+            <span>播放 <b>11.4 万</b></span>
+            <span>点赞 <b id="hjLike2">3,892</b></span>
+            <span>收藏 <b>1,946</b></span>
+          </div>
+          <div class="hj-actions">
+            <button class="hj-act" type="button" data-hj-like data-target="hjLike2" data-count="3892"><span class="hj-ic">👍</span>点赞</button>
+            <button class="hj-act" type="button" data-hj-save><span class="hj-ic">♡</span>收藏</button>
+            <button class="hj-act" type="button" data-hj-copy>复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="hj-video-item" data-tags="城市">
+        <div class="hj-video-cover">
+          <svg viewBox="0 0 360 202" role="img" aria-label="视频封面：夜晚沿海公路的路灯与远处车灯轨迹">
+            <rect width="360" height="202" fill="#0d2b3d"/>
+            <rect x="0" y="128" width="360" height="74" fill="#153b4f"/>
+            <g fill="#0a2431">
+              <rect x="18" y="82" width="34" height="46"/><rect x="66" y="64" width="26" height="64"/>
+              <rect x="110" y="94" width="40" height="34"/><rect x="252" y="72" width="30" height="56"/>
+              <rect x="300" y="90" width="34" height="38"/>
+            </g>
+            <g fill="#ffc861">
+              <circle cx="35" cy="72" r="4"/><circle cx="79" cy="54" r="4"/><circle cx="130" cy="86" r="4"/><circle cx="267" cy="64" r="4"/><circle cx="317" cy="82" r="4"/>
+            </g>
+            <path d="M0 170 Q90 156 180 176 T360 162" stroke="#ff7a4d" stroke-width="3" fill="none" opacity=".8"/>
+            <circle cx="60" cy="30" r="14" fill="#eaf3f8" opacity=".35"/>
+          </svg>
+          <span class="hj-dur">06:32</span>
+        </div>
+        <div class="hj-video-body">
+          <div class="hj-video-tags"><span class="hj-pill">城市</span><span class="hj-pill is-coral">声景</span></div>
+          <h3 class="hj-video-title">十点半之后的沿海公路：我把麦克风留在了护栏上</h3>
+          <p class="hj-video-sum">用一支固定机位与两支收音麦克风，记录城市慢下来的那段时间。海浪、货车、远处收摊声构成一条完整的声音线。</p>
+          <div class="hj-video-meta">
+            <span>作者 <a class="hj-author-link" href="#hj-authors">夜航折页</a></span>
+            <span>播放 <b>9.8 万</b></span>
+            <span>点赞 <b id="hjLike3">2,776</b></span>
+            <span>收藏 <b>1,208</b></span>
+          </div>
+          <div class="hj-actions">
+            <button class="hj-act" type="button" data-hj-like data-target="hjLike3" data-count="2776"><span class="hj-ic">👍</span>点赞</button>
+            <button class="hj-act" type="button" data-hj-save><span class="hj-ic">♡</span>收藏</button>
+            <button class="hj-act" type="button" data-hj-copy>复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="hj-video-item" data-tags="美食">
+        <div class="hj-video-cover">
+          <svg viewBox="0 0 360 202" role="img" aria-label="视频封面：渔港清晨的蒸汽锅与刚上岸的海货">
+            <rect width="360" height="202" fill="#e9f1f5"/>
+            <rect x="0" y="140" width="360" height="62" fill="#9fb6c4"/>
+            <rect x="118" y="112" width="124" height="34" rx="10" fill="#416276"/>
+            <ellipse cx="180" cy="110" rx="60" ry="12" fill="#c2d7e2"/>
+            <g fill="none" stroke="#fff" stroke-width="3" opacity=".8" stroke-linecap="round">
+              <path d="M152 90 q10 -18 0 -32"/><path d="M180 86 q10 -18 0 -32"/><path d="M208 90 q10 -18 0 -32"/>
+            </g>
+            <circle cx="76" cy="120" r="16" fill="#ffb27a"/>
+            <circle cx="292" cy="124" r="20" fill="#ffc861"/>
+          </svg>
+          <span class="hj-dur">11:24</span>
+        </div>
+        <div class="hj-video-body">
+          <div class="hj-video-tags"><span class="hj-pill is-amber">美食</span><span class="hj-pill">在地文化</span></div>
+          <h3 class="hj-video-title">渔港早市四点开张：一锅海鲜粥背后的六个环节</h3>
+          <p class="hj-video-sum">从卸货、分拣到熬粥的六道工序，跟着摊主跑完整条动线。附一份适合家庭复刻的简化做法与火候对照表。</p>
+          <div class="hj-video-meta">
+            <span>作者 <a class="hj-author-link" href="#hj-authors">灶台边笔记</a></span>
+            <span>播放 <b>6.5 万</b></span>
+            <span>点赞 <b id="hjLike4">1,884</b></span>
+            <span>收藏 <b>932</b></span>
+          </div>
+          <div class="hj-actions">
+            <button class="hj-act" type="button" data-hj-like data-target="hjLike4" data-count="1884"><span class="hj-ic">👍</span>点赞</button>
+            <button class="hj-act" type="button" data-hj-save><span class="hj-ic">♡</span>收藏</button>
+            <button class="hj-act" type="button" data-hj-copy>复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="hj-video-item" data-tags="户外">
+        <div class="hj-video-cover">
+          <svg viewBox="0 0 360 202" role="img" aria-label="视频封面：海崖步道上的徒步者与远处云层">
+            <rect width="360" height="202" fill="#dbe9f0"/>
+            <path d="M0 132 L90 62 L160 122 L230 70 L320 136 L360 118 V202 H0 Z" fill="#7ba3b8"/>
+            <path d="M0 168 L88 116 L166 158 L240 118 L320 168 L360 152 V202 H0 Z" fill="#2b7f9e"/>
+            <g stroke="#0b2436" stroke-width="3" fill="none" stroke-linecap="round">
+              <circle cx="176" cy="82" r="7" fill="#0b2436"/>
+              <path d="M176 90 v20 M176 100 l-10 10 M176 100 l10 10 M176 110 l-7 14 M176 110 l7 14"/>
+            </g>
+            <path d="M232 124 l10 -26 l10 26 z" fill="#ff7a4d"/>
+          </svg>
+          <span class="hj-dur">16:48</span>
+        </div>
+        <div class="hj-video-body">
+          <div class="hj-video-tags"><span class="hj-pill">户外</span><span class="hj-pill">实用攻略</span></div>
+          <h3 class="hj-video-title">海崖步道全程 12 公里：装备、补给点与三个危险路段</h3>
+          <p class="hj-video-sum">按实际徒步顺序标注了三个需要手脚并用的路段，附季节风向与退潮时间建议，适合第一次走这条线的人参考。</p>
+          <div class="hj-video-meta">
+            <span>作者 <a class="hj-author-link" href="#hj-authors">潮汐观测员</a></span>
+            <span>播放 <b>5.9 万</b></span>
+            <span>点赞 <b id="hjLike5">1,562</b></span>
+            <span>收藏 <b>1,431</b></span>
+          </div>
+          <div class="hj-actions">
+            <button class="hj-act" type="button" data-hj-like data-target="hjLike5" data-count="1562"><span class="hj-ic">👍</span>点赞</button>
+            <button class="hj-act" type="button" data-hj-save><span class="hj-ic">♡</span>收藏</button>
+            <button class="hj-act" type="button" data-hj-copy>复制链接</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 创作者矩阵（双列简介） ================= -->
+<section class="hj-section" id="hj-authors" style="background:linear-gradient(180deg,#f7fafc,#eef5f9);">
+  <div class="hj-wrap">
+    <div class="hj-sec-head">
+      <div>
+        <span class="hj-eyebrow">Creators</span>
+        <h2 class="hj-h2">海角专区<span class="hj-accent">创作者</span>名录</h2>
+        <p class="hj-lead" style="margin-top:10px;">他们在海角专区持续更新，用各自的镜头语言构成这片内容海域的经纬。点击可查看作者档案。</p>
+      </div>
+    </div>
+
+    <div class="hj-grid hj-g2">
+      <article class="hj-author-card">
+        <div class="hj-avatar" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#1f6f8b"/><circle cx="32" cy="25" r="11" fill="#eaf3f8"/><path d="M10 64 q22 -24 44 0 z" fill="#0b2436"/></svg>
+        </div>
+        <div class="hj-author-main">
+          <div class="hj-author-name">岸线档案室 <span class="hj-verify">官方认证</span></div>
+          <div class="hj-author-field">擅长：海岸纪录 / 长镜头 / 环境声</div>
+          <p class="hj-author-bio">海角专区签约创作团队，由两位纪录片方向的摄影师组成。三年间沿海岸线完成二十余个拍摄点位，坚持一镜到底与同期声。作品《潮线以北》入选年度专题主推，代表海角专区在长片叙事上的探索方向。</p>
+          <div class="hj-author-nums"><span>作品 <b>46</b></span><span>粉丝 <b>28.4 万</b></span><span>总播放 <b>612 万</b></span></div>
+          <div class="hj-author-more"><button class="hj-btn hj-btn-outline hj-btn-sm" type="button" data-hj-author="岸线档案室">查看档案</button></div>
+        </div>
+      </article>
+
+      <article class="hj-author-card">
+        <div class="hj-avatar" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#ffb27a"/><circle cx="32" cy="24" r="10" fill="#8a5b00"/><path d="M12 64 q20 -26 40 0 z" fill="#c98a5a"/></svg>
+        </div>
+        <div class="hj-author-main">
+          <div class="hj-author-name">南岸手作间</div>
+          <div class="hj-author-field">擅长：藤编 / 木作 / 工艺记录</div>
+          <p class="hj-author-bio">做了十一年藤编的独立手作人，三年前开始用视频记录工作台前的日常。她的视频几乎不加速，因为她认为工艺的价值就在那些看起来重复的时间里。在海角专区连载的《手作人的一天》已被两千多位观众收藏。</p>
+          <div class="hj-author-nums"><span>作品 <b>38</b></span><span>粉丝 <b>16.7 万</b></span><span>总播放 <b>284 万</b></span></div>
+          <div class="hj-author-more"><button class="hj-btn hj-btn-outline hj-btn-sm" type="button" data-hj-author="南岸手作间">查看档案</button></div>
+        </div>
+      </article>
+
+      <article class="hj-author-card">
+        <div class="hj-avatar" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#123c55"/><circle cx="32" cy="24" r="10" fill="#8fb9cd"/><path d="M10 64 q22 -22 44 0 z" fill="#081e2b"/><circle cx="48" cy="14" r="4" fill="#ffc861"/></svg>
+        </div>
+        <div class="hj-author-main">
+          <div class="hj-author-name">夜航折页 <span class="hj-verify">官方认证</span></div>
+          <div class="hj-author-field">擅长：城市夜行 / 声景 / 竖屏纪录</div>
+          <p class="hj-author-bio">习惯在夜里出门的影像作者，包里常年放着一支定向麦克风。作品的画面往往很安静，声音却很满。他认为一座城市真正的样子在关灯之后才显形，因此持续拍摄城市退潮时刻系列，是海角专区声景类内容的主要贡献者。</p>
+          <div class="hj-author-nums"><span>作品 <b>52</b></span><span>粉丝 <b>21.3 万</b></span><span>总播放 <b>438 万</b></span></div>
+          <div class="hj-author-more"><button class="hj-btn hj-btn-outline hj-btn-sm" type="button" data-hj-author="夜航折页">查看档案</button></div>
+        </div>
+      </article>
+
+      <article class="hj-author-card">
+        <div class="hj-avatar" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#2f8f6d"/><circle cx="32" cy="24" r="10" fill="#e3f6ee"/><path d="M12 64 q20 -24 40 0 z" fill="#15516a"/><rect x="42" y="10" width="12" height="4" rx="2" fill="#ffc861"/></svg>
+        </div>
+        <div class="hj-author-main">
+          <div class="hj-author-name">潮汐观测员</div>
+          <div class="hj-author-field">擅长：自然观察 / 徒步攻略 / 户外安全</div>
+          <p class="hj-author-bio">前海洋监测站工作人员，现在专职做海岸自然观察视频。他的内容以精确见长：潮位、风向、鸟群数量都会写进字幕与简介。海角专区户外类内容中，他的攻略视频收藏率长期排在前面，被很多第一次走海崖步道的人当作出发前必看。</p>
+          <div class="hj-author-nums"><span>作品 <b>64</b></span><span>粉丝 <b>19.8 万</b></span><span>总播放 <b>356 万</b></span></div>
+          <div class="hj-author-more"><button class="hj-btn hj-btn-outline hj-btn-sm" type="button" data-hj-author="潮汐观测员">查看档案</button></div>
+        </div>
+      </article>
+
+      <article class="hj-author-card">
+        <div class="hj-avatar" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#ff7a4d"/><circle cx="32" cy="24" r="10" fill="#fff2d4"/><path d="M10 64 q22 -24 44 0 z" fill="#8a5b00"/></svg>
+        </div>
+        <div class="hj-author-main">
+          <div class="hj-author-name">灶台边笔记</div>
+          <div class="hj-author-field">擅长：在地美食 / 食材溯源 / 家庭复刻</div>
+          <p class="hj-author-bio">在海边小城长大的美食记录者，擅长把一道菜拆成可复制的步骤，也擅长追问食材从哪里来。她的视频往往从早市开始，到厨房结束，中间穿插摊主的口述。海角专区多支高收藏美食视频都出自她手。</p>
+          <div class="hj-author-nums"><span>作品 <b>41</b></span><span>粉丝 <b>14.2 万</b></span><span>总播放 <b>266 万</b></span></div>
+          <div class="hj-author-more"><button class="hj-btn hj-btn-outline hj-btn-sm" type="button" data-hj-author="灶台边笔记">查看档案</button></div>
+        </div>
+      </article>
+
+      <article class="hj-author-card">
+        <div class="hj-avatar" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#c2d7e2"/><circle cx="32" cy="24" r="10" fill="#416276"/><path d="M12 64 q20 -24 40 0 z" fill="#0b2436"/><path d="M18 16 q14 -12 28 0" stroke="#ffc861" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="hj-author-main">
+          <div class="hj-author-name">灯塔下的小队</div>
+          <div class="hj-author-field">擅长：萌宠日常 / 治愈影像 / 轻纪录</div>
+          <p class="hj-author-bio">三个人、两只狗和一台旧相机，常驻在灯塔附近的小院。他们的视频节奏很慢，内容是狗在礁石上跑、雨落在铁皮棚、院子里晒着的渔网。海角专区用户评价中提到最多的词是「看完心里安静下来」，这也是他们持续更新的原因。</p>
+          <div class="hj-author-nums"><span>作品 <b>33</b></span><span>粉丝 <b>11.6 万</b></span><span>总播放 <b>198 万</b></span></div>
+          <div class="hj-author-more"><button class="hj-btn hj-btn-outline hj-btn-sm" type="button" data-hj-author="灯塔下的小队">查看档案</button></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 数据榜单（标签切换） ================= -->
+<section class="hj-section" id="hj-rank">
+  <div class="hj-wrap">
+    <div class="hj-sec-head">
+      <div>
+        <span class="hj-eyebrow">Ranking</span>
+        <h2 class="hj-h2">海角专区<span class="hj-accent">数据榜单</span>与本周热度</h2>
+        <p class="hj-lead" style="margin-top:10px;">榜单综合播放完成度、收藏率与评论质量计算，每周一更新，帮助观众更快找到值得看的内容。</p>
+      </div>
+    </div>
+
+    <div class="hj-rank-tabs" id="hjRankTabs">
+      <button class="hj-rank-tab is-active" type="button" data-rank="hot">热度榜</button>
+      <button class="hj-rank-tab" type="button" data-rank="new">新人榜</button>
+      <button class="hj-rank-tab" type="button" data-rank="word">口碑榜</button>
+    </div>
+
+    <div class="hj-rank-panel is-active" data-panel="hot">
+      <div class="hj-rank-list">
+        <div class="hj-rank-row"><span class="hj-rank-no">01</span><div><div class="hj-rank-title">《潮线以北》第 3 集：退潮之后的三个小时</div><div class="hj-rank-sub">岸线档案室 · 海岸纪录 · 播放完成度 78%</div></div><span class="hj-rank-score">热度 9,820</span></div>
+        <div class="hj-rank-row"><span class="hj-rank-no">02</span><div><div class="hj-rank-title">一把藤椅要编满 43 个小时</div><div class="hj-rank-sub">南岸手作间 · 手作 · 收藏率 17.1%</div></div><span class="hj-rank-score">热度 8,416</span></div>
+        <div class="hj-rank-row"><span class="hj-rank-no">03</span><div><div class="hj-rank-title">十点半之后的沿海公路：声景全记录</div><div class="hj-rank-sub">夜航折页 · 城市声景 · 评论 412 条</div></div><span class="hj-rank-score">热度 7,905</span></div>
+        <div class="hj-rank-row"><span class="hj-rank-no">04</span><div><div class="hj-rank-title">迁徙季蹲守第三天：候鸟落在我十米外</div><div class="hj-rank-sub">潮汐观测员 · 自然观察 · 收藏 861</div></div><span class="hj-rank-score">热度 7,140</span></div>
+        <div class="hj-rank-row"><span class="hj-rank-no">05</span><div><div class="hj-rank-title">渔港早市四点开张：海鲜粥的六个环节</div><div class="hj-rank-sub">灶台边笔记 · 在地美食 · 完播率 69%</div></div><span class="hj-rank-score">热度 6,588</span></div>
+        <div class="hj-rank-row"><span class="hj-rank-no">06</span><div><div class="hj-rank-title">海崖步道全程 12 公里实用攻略</div><div class="hj-rank-sub">潮汐观测员 · 户外 · 收藏 1,431</div></div><span class="hj-rank-score">热度 6,102</span></div>
+      </div>
+    </div>
+
+    <div class="hj-rank-panel" data-panel="new">
+      <div class="hj-rank-list">
+        <div class="hj-rank-row"><span class="hj-rank-no">01</span><div><div class="hj-rank-title">第一次拍海：我把手机架在了礁石缝里</div><div class="hj-rank-sub">新创作者 · 阿砾 · 入驻 12 天</div></div><span class="hj-rank-score">新人分 862</span></div>
+        <div class="hj-rank-row"><span class="hj-rank-no">02</span><div><div class="hj-rank-title">渔网修补教学：三分钟学会一个结</div><div class="hj-rank-sub">新创作者 · 老陈的网 · 入驻 9 天</div></div><span class="hj-rank-score">新人分 798</span></div>
+        <div class="hj-rank-row"><span class="hj-rank-no">03</span><div><div class="hj-rank-title">退潮后的滩涂微距：一平方米里的世界</div><div class="hj-rank-sub">新创作者 · 微距阿禾 · 入驻 15 天</div></div><span class="hj-rank-score">新人分 744</span></div>
+        <div class="hj-rank-row"><span class="hj-rank-no">04</span><div><div class="hj-rank-title">灯塔值班室的十二个物件</div><div class="hj-rank-sub">新创作者 · 值班日记 · 入驻 7 天</div></div><span class="hj-rank-score">新人分 690</span></div>
+        <div class="hj-rank-row"><span class="hj-rank-no">05</span><div><div class="hj-rank-title">在沿海小城开一间旧书店的第 30 天</div><div class="hj-rank-sub">新创作者 · 页边批注 · 入驻 21 天</div></div><span class="hj-rank-score">新人分 655</span></div>
+      </div>
+    </div>
+
+    <div class="hj-rank-panel" data-panel="word">
+      <div class="hj-rank-list">
+        <div class="hj-rank-row"><span class="hj-rank-no">01</span><div><div class="hj-rank-title">潮间带笔记：退潮后两小时的一整套生态</div><div class="hj-rank-sub">口碑关键词：严谨、耐看、信息密度高</div></div><span class="hj-rank-score">口碑 9.6</span></div>
+        <div class="hj-rank-row"><span class="hj-rank-no">02</span><div><div class="hj-rank-title">一只陶碗的 11 次失败</div><div class="hj-rank-sub">口碑关键词：真实、不煽情、有耐心</div></div><span class="hj-rank-score">口碑 9.4</span></div>
+        <div class="hj-rank-row"><span class="hj-rank-no">03</span><div><div class="hj-rank-title">灯塔下的小院：雨天特辑</div><div class="hj-rank-sub">口碑关键词：治愈、安静、想反复看</div></div><span class="hj-rank-score">口碑 9.3</span></div>
+        <div class="hj-rank-row"><span class="hj-rank-no">04</span><div><div class="hj-rank-title">城市退潮时刻：末班车之后</div><div class="hj-rank-sub">口碑关键词：声音好、氛围强、有细节</div></div><span class="hj-rank-score">口碑 9.1</span></div>
+        <div class="hj-rank-row"><span class="hj-rank-no">05</span><div><div class="hj-rank-title">藤椅的 43 小时完整流程</div><div class="hj-rank-sub">口碑关键词：工序清楚、值得收藏</div></div><span class="hj-rank-score">口碑 8.9</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 用户评价（评分摘要 + 短评） ================= -->
+<section class="hj-section" id="hj-reviews" style="background:linear-gradient(180deg,#eef5f9,#f7fafc);">
+  <div class="hj-wrap">
+    <div class="hj-sec-head">
+      <div>
+        <span class="hj-eyebrow">Reviews</span>
+        <h2 class="hj-h2">海角专区<span class="hj-accent">用户口碑</span>与真实评价</h2>
+        <p class="hj-lead" style="margin-top:10px;">来自观众的公开评价，覆盖内容质量、观看体验与社区氛围三个维度，未做删改。</p>
+      </div>
+    </div>
+
+    <div class="hj-score-box">
+      <div>
+        <div class="hj-score-big">4.8<sub>/ 5.0</sub></div>
+        <div class="hj-stars" aria-hidden="true">★★★★★</div>
+        <p style="font-size:12.5px;color:#a9c9d8;margin-top:6px;">基于 2,186 条有效评价</p>
+      </div>
+      <div class="hj-score-bars">
+        <div class="hj-score-bar"><span>内容质量</span><i><b style="width:96%"></b></i><span>4.8</span></div>
+        <div class="hj-score-bar"><span>观看体验</span><i><b style="width:92%"></b></i><span>4.6</span></div>
+        <div class="hj-score-bar"><span>社区氛围</span><i><b style="width:94%"></b></i><span>4.7</span></div>
+        <div class="hj-score-bar"><span>更新稳定</span><i><b style="width:88%"></b></i><span>4.4</span></div>
+      </div>
+    </div>
+
+    <div class="hj-grid hj-g2">
+      <article class="hj-review">
+        <div class="hj-review-top">
+          <span class="hj-review-av" style="background:#1f6f8b;">林</span>
+          <div><div class="hj-review-name">林间慢跑</div><div class="hj-review-meta">观看 2 年 · 收藏 63 支</div></div>
+        </div>
+        <div class="hj-stars" aria-hidden="true">★★★★★</div>
+        <p class="hj-review-text">海角专区最打动我的是克制。很多视频网站生怕你看不懂，旁白配乐塞得满满当当，这里反而愿意让画面停一会儿。〈潮线以北〉我看了三遍，每次都能注意到新的声音细节。</p>
+      </article>
+
+      <article class="hj-review">
+        <div class="hj-review-top">
+          <span class="hj-review-av" style="background:#c98a5a;">周</span>
+          <div><div class="hj-review-name">周小满</div><div class="hj-review-meta">手作爱好者 · 注册 8 个月</div></div>
+        </div>
+        <div class="hj-stars" aria-hidden="true">★★★★★</div>
+        <p class="hj-review-text">作为一个自己也在编藤的人，能看出来南岸手作间的视频没有省略关键步骤，这一点特别难得。希望以后能多出点工具清单，我照着买了两样，确实好用。</p>
+      </article>
+
+      <article class="hj-review">
+        <div class="hj-review-top">
+          <span class="hj-review-av" style="background:#2f8f6d;">陈</span>
+          <div><div class="hj-review-name">陈默不说话</div><div class="hj-review-meta">户外徒步 · 收藏 21 支</div></div>
+        </div>
+        <div class="hj-stars" aria-hidden="true">★★★★☆</div>
+        <p class="hj-review-text">海崖步道那期攻略非常实用，三个危险路段标注得很清楚，我按他说的避开涨潮时段走的，全程很顺。扣一星只是因为更新的频率如果能再快一点就好了。</p>
+      </article>
+
+      <article class="hj-review">
+        <div class="hj-review-top">
+          <span class="hj-review-av" style="background:#123c55;">夜</span>
+          <div><div class="hj-review-name">夜班归人</div><div class="hj-review-meta">城市声景关注者</div></div>
+        </div>
+        <div class="hj-stars" aria-hidden="true">★★★★★</div>
+        <p class="hj-review-text">夜航折页的声景系列我几乎每期都听。戴耳机看真的很不一样，护栏边的风声和远处的货车声层次分明。这类内容在别的地方很难找到，海角专区能一直做下去挺好。</p>
+      </article>
+
+      <article class="hj-review">
+        <div class="hj-review-top">
+          <span class="hj-review-av" style="background:#ff7a4d;">阿</span>
+          <div><div class="hj-review-name">阿砾</div><div class="hj-review-meta">新创作者 · 入驻 12 天</div></div>
+        </div>
+        <div class="hj-stars" aria-hidden="true">★★★★☆</div>
+        <p class="hj-review-text">刚开始投稿的时候挺忐忑的，没想到编辑给了很具体的修改建议，还把我的片子放进了新人榜。作为新人能感受到平台是真的在看内容，而不是只看粉丝量。</p>
+      </article>
+
+      <article class="hj-review">
+        <div class="hj-review-top">
+          <span class="hj-review-av" style="background:#416276;">海</span>
+          <div><div class="hj-review-name">海边旧书店</div><div class="hj-review-meta">线下放映合作方</div></div>
+        </div>
+        <div class="hj-stars" aria-hidden="true">★★★★★</div>
+        <p class="hj-review-text">我们书店承办过一次海角专区的线下放映，从选片到物料对接都很专业，映后交流也组织得扎实。看得出来这个品牌是把内容当长期事业在做的，愿意继续合作。</p>
+      </article>
+
+      <article class="hj-review">
+        <div class="hj-review-top">
+          <span class="hj-review-av" style="background:#8a5b00;">苏</span>
+          <div><div class="hj-review-name">苏打水不加冰</div><div class="hj-review-meta">美食区常驻观众</div></div>
+        </div>
+        <div class="hj-stars" aria-hidden="true">★★★★☆</div>
+        <p class="hj-review-text">海鲜粥那期我照着做了，火候对照表写得很细，第一次就成功了。唯一想提的是希望视频简介里能直接放食材清单，不用来回拖进度条。</p>
+      </article>
+
+      <article class="hj-review">
+        <div class="hj-review-top">
+          <span class="hj-review-av" style="background:#15516a;">顾</span>
+          <div><div class="hj-review-name">顾屿</div><div class="hj-review-meta">观看 1 年 · 收藏 34 支</div></div>
+        </div>
+        <div class="hj-stars" aria-hidden="true">★★★★★</div>
+        <p class="hj-review-text">很喜欢灯塔下的小队，内容没什么宏大叙事，就是院子、狗、下雨，但看完心里很平。海角专区能容纳这种慢内容的平台不多，希望别被流量带偏。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 企业动态 + 合作 ================= -->
+<section class="hj-section" id="hj-updates">
+  <div class="hj-wrap">
+    <div class="hj-grid" style="grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);align-items:start;gap:34px;">
+      <div>
+        <span class="hj-eyebrow">Brand News</span>
+        <h2 class="hj-h2">海角专区<span class="hj-accent">企业动态</span>与更新日志</h2>
+        <p class="hj-lead" style="margin-top:10px;margin-bottom:26px;">平台规则、企划进度与官方发布信息，统一在这里公开，接受社区监督。</p>
+
+        <div class="hj-timeline">
+          <div class="hj-tl-item is-new">
+            <div class="hj-tl-date">2026 / 11 / 20</div>
+            <div class="hj-tl-title">冬季影像企划正式上线</div>
+            <p class="hj-tl-text">首批 12 支原创短片已发布，覆盖海岸纪录、手作、城市声景三类题材。专题页同步开放投稿入口，报名截止至 12 月 18 日。</p>
+          </div>
+          <div class="hj-tl-item">
+            <div class="hj-tl-date">2026 / 11 / 08</div>
+            <div class="hj-tl-title">创作者认证规则更新</div>
+            <p class="hj-tl-text">新增内容持续性指标，认证审核周期由 14 天缩短至 7 个工作日。已在个人页展示新的擅长领域标签，便于观众检索。</p>
+          </div>
+          <div class="hj-tl-item">
+            <div class="hj-tl-date">2026 / 10 / 26</div>
+            <div class="hj-tl-title">「海岸线记事」第 11、12 支上线</div>
+            <p class="hj-tl-text">分别记录灯塔值班室与潮间带生态，均采用同期声与手写字幕。专题累计播放突破 340 万，收藏率保持在 15% 以上。</p>
+          </div>
+          <div class="hj-tl-item">
+            <div class="hj-tl-date">2026 / 10 / 12</div>
+            <div class="hj-tl-title">举报与反馈通道优化</div>
+            <p class="hj-tl-text">所有视频条目新增一键反馈入口，处理进度可在通知中心查看。本季度已处理反馈 236 条，平均响应时间 1.6 天。</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <span class="hj-eyebrow">Partners</span>
+        <h2 class="hj-h2">合作品牌与<span class="hj-accent">伙伴</span></h2>
+        <p class="hj-lead" style="margin-top:10px;margin-bottom:22px;">与我们一起支持原创影像的机构与品牌，合作方向包括联合企划、线下放映与设备支持。</p>
+
+        <div class="hj-grid" style="grid-template-columns:1fr;gap:12px;">
+          <div class="hj-partner-item"><span class="hj-partner-logo" style="background:#1f6f8b;">海</span><span>海岸线文化基金<small>联合企划支持</small></span></div>
+          <div class="hj-partner-item"><span class="hj-partner-logo" style="background:#c98a5a;">灯</span><span>灯塔旧书店<small>线下放映合作</small></span></div>
+          <div class="hj-partner-item"><span class="hj-partner-logo" style="background:#2f8f6d;">屿</span><span>屿岸影像器材<small>拍摄设备支持</small></span></div>
+          <div class="hj-partner-item"><span class="hj-partner-logo" style="background:#ff7a4d;">潮</span><span>潮间自然教育<small>自然观察顾问</small></span></div>
+        </div>
+
+        <div class="hj-card" style="margin-top:22px;background:linear-gradient(135deg,#fff8ec,#fff);">
+          <h3 class="hj-h3">品牌合作联络</h3>
+          <p class="hj-video-sum">如需联合企划、内容授权或线下放映合作，可通过页面底部投稿入口提交资料，品牌团队将在三个工作日内回复。</p>
+          <div class="hj-actions">
+            <button class="hj-btn hj-btn-primary hj-btn-sm" type="button" data-hj-submit>提交合作意向</button>
+            <button class="hj-act" type="button" data-hj-copy>复制联系邮箱</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 投稿 / 联系 ================= -->
+<section class="hj-section" style="padding-top:0;">
+  <div class="hj-wrap">
+    <div class="hj-submit">
+      <div>
+        <h3>把你的海角影像投递给我们</h3>
+        <p>海角专区长期开放投稿，接受纪录、手作、城市、户外、美食、萌宠等题材。通过审核的作品将进入视频社区，表现优异者有机会入选专题企划并获得官方推荐。</p>
+      </div>
+      <div class="hj-submit-actions">
+        <button class="hj-btn hj-btn-primary" type="button" data-hj-submit>立即投稿报名</button>
+        <button class="hj-btn hj-btn-ghost" type="button" data-hj-share>分享社区</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="hj-section" id="hj-faq" style="background:linear-gradient(180deg,#f7fafc,#eef5f9);">
+  <div class="hj-wrap">
+    <div class="hj-sec-head">
+      <div>
+        <span class="hj-eyebrow">Help Center</span>
+        <h2 class="hj-h2">海角专区<span class="hj-accent">常见问题</span>与联系投稿</h2>
+        <p class="hj-lead" style="margin-top:10px;">关于观看、投稿、认证与合作的常见疑问，点击展开查看详细说明。</p>
+      </div>
+    </div>
+
+    <div class="hj-faq">
+      <details open>
+        <summary>海角专区的内容是免费观看的吗？</summary>
+        <div class="hj-faq-body">目前海角专区官方网站的全部原创视频与专题内容均可免费观看，无需注册即可浏览。注册后可以收藏视频、关注创作者并参与评论，收藏夹会保存在个人账号中，换设备登录也能同步。</div>
+      </details>
+      <details>
+        <summary>如何向海角专区投稿？需要什么条件？</summary>
+        <div class="hj-faq-body">点击页面任意「投稿报名」按钮即可填写表单，提交作品链接、题材标签与简要说明。我们不要求专业设备，但要求内容原创、画面稳定、声音清楚，单支时长建议 3 至 30 分钟。审核周期通常为 5 至 7 个工作日，结果会通过站内通知反馈。</div>
+      </details>
+      <details>
+        <summary>创作者认证有哪些权益？</summary>
+        <div class="hj-faq-body">通过认证后，作者页会显示认证标识与擅长领域标签，作品在社区流中获得更高的推荐权重，并优先进入专题企划的候选名单。认证每半年复核一次，主要考察内容持续性与社区反馈，不设粉丝量硬门槛。</div>
+      </details>
+      <details>
+        <summary>视频里的音乐和素材可以商用吗？</summary>
+        <div class="hj-faq-body">海角专区发布的视频均为正版授权内容，仅供个人观看与分享。如需用于商业用途、二次剪辑或线下放映，请通过页面底部合作入口提交授权申请，我们会根据具体用途提供书面许可与素材清单。</div>
+      </details>
+      <details>
+        <summary>为什么有些视频没有配旁白？</summary>
+        <div class="hj-faq-body">这是海角专区在纪录片方向上的一种选择。我们认为环境声与画面本身可以承担叙事功能，过度旁白反而会削弱观众的观察空间。部分专题会提供手写字幕卡辅助理解，观看时建议佩戴耳机。</div>
+      </details>
+      <details>
+        <summary>如何申请线下放映或品牌合作？</summary>
+        <div class="hj-faq-body">线下放映、联合企划与设备支持等合作，可通过「提交合作意向」按钮填写机构信息与合作方向。品牌团队会在三个工作日内回复，并视情况安排一次线上沟通，确认片单、档期与物料分工。</div>
+      </details>
+      <details>
+        <summary>发现内容问题应该怎么反馈？</summary>
+        <div class="hj-faq-body">每支视频下方都有「反馈」按钮，可提交版权、内容准确性或社区规范相关问题。我们承诺在 48 小时内给出初步回应，复杂情况会在处理完成后通过站内通知告知结果与依据。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 页脚 ================= -->
+<footer class="hj-footer">
+  <div class="hj-wrap">
+    <div class="hj-footer-grid">
+      <div>
+        <div class="hj-brand">
+          <span class="hj-brand-mark" aria-hidden="true">海</span>
+          <span>
+            <span class="hj-brand-name">海角专区</span>
+            <span class="hj-brand-sub">Haijiao Video</span>
+          </span>
+        </div>
+        <p class="hj-footer-desc">海角专区官方网站，是一家持续运营的原创视频品牌与内容平台。我们深耕影像这一垂直领域，以原创、正版、高清为底线，为创作者与观众搭建值得信赖的内容生态。</p>
+      </div>
+      <div>
+        <h4>内容板块</h4>
+        <div class="hj-footer-links">
+          <a href="#hj-focus">焦点内容</a>
+          <a href="#hj-topics">专题企划</a>
+          <a href="#hj-videos">视频社区</a>
+          <a href="#hj-rank">数据榜单</a>
+        </div>
+      </div>
+      <div>
+        <h4>关于品牌</h4>
+        <div class="hj-footer-links">
+          <a href="#hj-about">品牌解析</a>
+          <a href="#hj-authors">创作者名录</a>
+          <a href="#hj-updates">企业动态</a>
+          <a href="#hj-reviews">用户口碑</a>
+        </div>
+      </div>
+      <div>
+        <h4>参与与帮助</h4>
+        <div class="hj-footer-links">
+          <a href="#hj-faq">常见问题</a>
+          <a href="#hj-faq">投稿报名</a>
+          <a href="#hj-faq">合作联络</a>
+          <a href="#hj-top-anchor">回到顶部</a>
+        </div>
+      </div>
+    </div>
+    <div class="hj-footer-bottom">
+      <span><b>海角专区官方网站</b> · 版权所有 © 2026 海角专区（海南）文化传媒有限公司</span>
+      <span>备案号：琼 ICP 备 2026 088888 号 · 网络文化经营许可证 · 持续运营中</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="hj-toast" id="hjToast" role="status" aria-live="polite"></div>
+
+<!-- 通用弹窗 -->
+<div class="hj-modal" id="hjModal" role="dialog" aria-modal="true" aria-labelledby="hjModalTitle">
+  <div class="hj-modal-box">
+    <div class="hj-modal-head">
+      <h3 id="hjModalTitle">提示</h3>
+      <button class="hj-modal-close" type="button" id="hjModalClose" aria-label="关闭">×</button>
+    </div>
+    <div id="hjModalBody"></div>
+  </div>
+</div>
+
+<button class="hj-to-top" id="hjToTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 工具：Toast ---------- */
+  var toastEl = document.getElementById('hjToast');
+  var toastTimer = null;
+  function toast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2200);
+  }
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = document.getElementById('hjBurger');
+  var mobileNav = document.getElementById('hjMobileNav');
+  if(burger && mobileNav){
+    burger.addEventListener('click', function(){
+      var open = mobileNav.classList.toggle('is-open');
+      burger.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobileNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        mobileNav.classList.remove('is-open');
+        burger.classList.remove('is-open');
+        burger.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* ---------- 搜索提示 ---------- */
+  var searchInput = document.getElementById('hjSearchInput');
+  var searchBtn = document.getElementById('hjSearchBtn');
+  var searchHint = document.getElementById('hjSearchHint');
+  var searchPool = [
+    '海岸线记事 专题', '潮线以北 第 3 集', '南岸手作间 藤编', '夜航折页 城市声景',
+    '潮汐观测员 海崖步道', '灶台边笔记 渔港早市', '灯塔下的小队 治愈影像', '手作人的一天 连载'
+  ];
+  function doSearch(){
+    if(!searchInput || !searchHint) return;
+    var q = (searchInput.value || '').trim();
+    if(!q){
+      searchHint.innerHTML = '<b>热门搜索：</b> ' + searchPool.slice(0,4).join(' / ');
+      searchHint.classList.add('is-open');
+      return;
+    }
+    var hit = searchPool.filter(function(item){ return item.indexOf(q) > -1; });
+    if(hit.length){
+      searchHint.innerHTML = '<b>找到 ' + hit.length + ' 条相关：</b> ' + hit.slice(0,4).join(' / ');
+    }else{
+      searchHint.innerHTML = '未匹配到「' + q.replace(/[<>&]/g,'') + '」，可尝试题材关键词，如：户外 / 手作 / 城市 / 美食。';
+    }
+    searchHint.classList.add('is-open');
+  }
+  if(searchBtn){
+    searchBtn.addEventListener('click', function(e){ e.stopPropagation(); doSearch(); });
+  }
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+    });
+    searchInput.addEventListener('focus', function(){
+      if(searchInput.value.trim() === '' && searchHint){
+        searchHint.innerHTML = '<b>热门搜索：</b> ' + searchPool.slice(0,4).join(' / ');
+        searchHint.classList.add('is-open');
+      }
+    });
+    searchInput.addEventListener('input', function(){
+      if(searchHint) searchHint.classList.remove('is-open');
+    });
+  }
+  document.addEventListener('click', function(e){
+    if(searchHint && searchInput){
+      if(!searchHint.contains(e.target) && e.target !== searchInput && e.target !== searchBtn){
+        searchHint.classList.remove('is-open');
+      }
+    }
+  });
+
+  /* ---------- 点赞 ---------- */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-hj-like]');
+    if(likeBtn){
+      var targetId = likeBtn.getAttribute('data-target');
+      var target = targetId ? document.getElementById(targetId) : null;
+      var count = parseInt(likeBtn.getAttribute('data-count') || '0', 10);
+      var liked = likeBtn.classList.toggle('is-liked');
+      if(target){
+        var next = liked ? count + 1 : count;
+        target.textContent = next.toLocaleString('en-US');
+      }
+      likeBtn.setAttribute('data-count', String(liked ? count + 1 : count));
+      toast(liked ? '已点赞，感谢你的支持' : '已取消点赞');
+      return;
+    }
+
+    /* ---------- 收藏 ---------- */
+    var saveBtn = e.target.closest('[data-hj-save]');
+    if(saveBtn){
+      var saved = saveBtn.classList.toggle('is-saved');
+      var ic = saveBtn.querySelector('.hj-ic');
+      if(ic) ic.textContent = saved ? '♥' : '♡';
+      saveBtn.lastChild.textContent = saved ? '已收藏' : '收藏';
+      toast(saved ? '已加入收藏，可在个人页查看' : '已取消收藏');
+      return;
+    }
+
+    /* ---------- 复制链接 ---------- */
+    var copyBtn = e.target.closest('[data-hj-copy]');
+    if(copyBtn){
+      var text = '海角专区 · 原创高清视频社区';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){ toast('链接已复制到剪贴板'); })
+        .catch(function(){ toast('复制失败，请长按选择复制'); });
+      }else{
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try{
+          document.execCommand('copy');
+          toast('链接已复制到剪贴板');
+        }catch(err){
+          toast('复制失败，请长按选择复制');
+        }
+        document.body.removeChild(ta);
+      }
+      return;
+    }
+
+    /* ---------- 分享 ---------- */
+    var shareBtn = e.target.closest('[data-hj-share]') || (e.target.id === 'hjShareHero' ? e.target : null);
+    if(shareBtn){
+      showShare();
+      return;
+    }
+
+    /* ---------- 反馈 / 举报 ---------- */
+    var reportBtn = e.target.closest('[data-hj-report]');
+    if(reportBtn){
+      openModal('反馈与举报', ''
+        + '<form class="hj-form" id="hjReportForm">'
+        + '<div><label for="hjReportType">问题类型</label>'
+        + '<select id="hjReportType"><option>内容准确性问题</option><option>版权相关</option><option>播放异常</option><option>社区规范问题</option><option>其他建议</option></select></div>'
+        + '<div><label for="hjReportText">补充说明</label>'
+        + '<textarea id="hjReportText" placeholder="请简要描述你遇到的问题，我们会尽快处理。"></textarea></div>'
+        + '<p class="hj-form-note">提交后将在 48 小时内给出初步回应，处理结果通过站内通知告知。</p>'
+        + '<button class="hj-btn hj-btn-primary" type="submit">提交反馈</button>'
+        + '</form>');
+      return;
+    }
+
+    /* ---------- 投稿 ---------- */
+    var submitBtn = e.target.closest('[data-hj-submit]');
+    if(submitBtn){
+      openModal('投稿报名', ''
+        + '<form class="hj-form" id="hjSubmitForm">'
+        + '<div><label for="hjSubName">创作者昵称</label><input id="hjSubName" type="text" placeholder="用于展示的昵称" required></div>'
+        + '<div><label for="hjSubTopic">作品题材</label>'
+        + '<select id="hjSubTopic"><option>海岸纪录</option><option>手作工艺</option><option>城市声景</option><option>户外徒步</option><option>在地美食</option><option>萌宠治愈</option></select></div>'
+        + '<div><label for="hjSubLink">作品链接</label><input id="hjSubLink" type="text" placeholder="填写可访问的作品地址"></div>'
+        + '<div><label for="hjSubDesc">作品简介</label><textarea id="hjSubDesc" placeholder="简单介绍拍摄背景、时长与想表达的内容。"></textarea></div>'
+        + '<p class="hj-form-note">投稿要求原创、画面稳定、声音清楚，审核周期通常为 5 至 7 个工作日。</p>'
+        + '<button class="hj-btn hj-btn-primary" type="submit">提交投稿</button>'
+        + '</form>');
+      return;
+    }
+
+    /* ---------- 作者档案 ---------- */
+    var authorBtn = e.target.closest('[data-hj-author]');
+    if(authorBtn){
+      var name = authorBtn.getAttribute('data-hj-author');
+      openModal(name + ' · 作者档案', ''
+        + '<p style="font-size:14px;color:#5b7285;line-height:1.9;margin-bottom:14px;">该创作者已通过海角专区实名与内容持续性审核，作品主要发布于海岸纪录、在地文化与手作工艺等专题。作者页包含完整作品列表、擅长领域标签与更新节奏说明，观众可直接关注并接收更新提醒。</p>'
+        + '<div class="hj-actions" style="margin-bottom:14px;">'
+        + '<span class="hj-pill">作品完整列表</span><span class="hj-pill is-coral">官方认证</span><span class="hj-pill is-amber">持续更新</span>'
+        + '</div>'
+        + '<p class="hj-form-note">如需合作或内容授权，请通过页面底部的合作入口提交资料。</p>');
+      return;
+    }
+  });
+
+  /* ---------- 弹窗 ---------- */
+  var modal = document.getElementById('hjModal');
+  var modalTitle = document.getElementById('hjModalTitle');
+  var modalBody = document.getElementById('hjModalBody');
+  var modalClose = document.getElementById('hjModalClose');
+  function openModal(title, html){
+    if(!modal) return;
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    if(!modal) return;
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+  if(modalClose){
+    modalClose.addEventListener('click', closeModal);
+  }
+  if(modal){
+    modal.addEventListener('click', function(e){
+      if(e.target === modal) closeModal();
+    });
+  }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModal();
+  });
+
+  /* ---------- 弹窗内表单提交（事件委托） ---------- */
+  document.addEventListener('submit', function(e){
+    var form = e.target;
+    if(form.id === 'hjSubmitForm' || form.id === 'hjReportForm' || form.id === 'hjShareForm'){
+      e.preventDefault();
+      closeModal();
+      toast(form.id === 'hjReportForm' ? '反馈已提交，感谢你的帮助' : '提交成功，我们会尽快与你联系');
+      form.reset();
+    }
+  });
+
+  /* ---------- 分享面板 ---------- */
+  function showShare(){
+    openModal('分享海角专区', ''
+      + '<p style="font-size:14px;color:#5b7285;line-height:1.9;margin-bottom:16px;">把海角专区的原创影像分享给同样喜欢慢内容的朋友。</p>'
+      + '<form class="hj-form" id="hjShareForm">'
+      + '<div><label for="hjShareChannel">分享渠道</label>'
+      + '<select id="hjShareChannel"><option>微信</option><option>微博</option><option>QQ</option><option>复制链接</option></select></div>'
+      + '<div><label for="hjShareNote">附言</label><input id="hjShareNote" type="text" placeholder="写一句推荐语（选填）"></div>'
+      + '<button class="hj-btn hj-btn-primary" type="submit">确认分享</button>'
+      + '</form>');
+  }
+
+  /* ---------- 视频标签筛选 ---------- */
+  var filterWrap = document.getElementById('hjVideoFilter');
+  var videoList = document.getElementById('hjVideoList');
+  if(filterWrap && videoList){
+    filterWrap.addEventListener('click', function(e){
+      var btn = e.target.closest('[data-filter]');
+      if(!btn) return;
+      var all = filterWrap.querySelectorAll('.hj-rank-tab');
+      Array.prototype.forEach.call(all, function(b){ b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      var key = btn.getAttribute('data-filter');
+      var items = videoList.querySelectorAll('.hj-video-item');
+      var shown = 0;
+      Array.prototype.forEach.call(items, function(item){
+        var tags = item.getAttribute('data-tags') || '';
+        var ok = (key === 'all') || (tags.indexOf(key) > -1);
+        item.style.display = ok ? '' : 'none';
+        if(ok) shown++;
+      });
+      if(shown === 0){
+        toast('该题材暂时没有新内容，看看全部吧');
+      }
+    });
+  }
+
+  /* ---------- 榜单切换 ---------- */
+  var rankTabs = document.getElementById('hjRankTabs');
+  if(rankTabs){
+    rankTabs.addEventListener('click', function(e){
+      var btn = e.target.closest('[data-rank]');
+      if(!btn) return;
+      var all = rankTabs.querySelectorAll('.hj-rank-tab');
+      Array.prototype.forEach.call(all, function(b){ b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      var key = btn.getAttribute('data-rank');
+      var panels = document.querySelectorAll('.hj-rank-panel');
+      Array.prototype.forEach.call(panels, function(p){
+        p.classList.toggle('is-active', p.getAttribute('data-panel') === key);
+      });
+    });
+  }
+
+  /* ---------- 回到顶部 ---------- */
+  var toTop = document.getElementById('hjToTop');
+  window.addEventListener('scroll', function(){
+    if(!toTop) return;
+    if(window.scrollY > 520){
+      toTop.classList.add('is-show');
+    }else{
+      toTop.classList.remove('is-show');
+    }
+  }, { passive: true });
+  if(toTop){
+    toTop.addEventListener('click', function(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 导航高亮（滚动监听） ---------- */
+  var navLinks = document.querySelectorAll('.hj-nav a[href^="#"]');
+  var sections = [];
+  Array.prototype.forEach.call(navLinks, function(a){
+    var id = a.getAttribute('href');
+    var sec = id && id.length > 1 ? document.querySelector(id) : null;
+    if(sec) sections.push({ el: sec, link: a });
+  });
+  if(sections.length && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          Array.prototype.forEach.call(navLinks, function(a){ a.classList.remove('is-active'); });
+          for(var i = 0; i < sections.length; i++){
+            if(sections[i].el === entry.target){
+              sections[i].link.classList.add('is-active');
+              break;
+            }
+          }
+        }
+      });
+    }, { rootMargin: '-120px 0px -60% 0px', threshold: 0 });
+    sections.forEach(function(s){ io.observe(s.el); });
+  }
+
+})();
+</script>
+</body>
+  </html>
